@@ -21,6 +21,6 @@ window.addEventListener("load", async () => { // upon loading it starts the func
     info.innerHTML += '<a href="' + responseJSON.student.information.website + '" target="_blank">' + responseJSON.student.information.website + '<br></a>';
 
     for(let i=0;i<responseJSON.student.websites.length;i++){ //Loops as long as i is less than the array length
-        websites.innerHTML += '<li><a href="'+responseJSON.student.websites[i].siteurl+'" target="_blank" title="'+responseJSON.student.websites[i].description+'">'+responseJSON.student.websites[i].sitename+'</a></li>';
+        websites.innerHTML += '<li><a href="'+responseJSON.student.websites[i].siteurl+'" target="_blank" title="'+responseJSON.student.websites[i].descriptionc+'">'+responseJSON.student.websites[i].sitename+'</a></li>';
     }
 });
