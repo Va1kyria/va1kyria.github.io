@@ -5,7 +5,7 @@
 /*  Delar till ej obligatorisk funktionalitet, som kan ge poäng för högre betyg
 *   Radera rader för funktioner du vill visa på webbsidan. */
 //document.getElementById("player").style.display = "none";      // Radera denna rad för att visa musikspelare
-document.getElementById("shownumrows").style.display = "none"; // Radera denna rad för att visa antal träffar
+ // Radera denna rad för att visa antal träffar
 
 /* Här under börjar du skriva din JavaScript-kod */
 
@@ -14,20 +14,64 @@ document.getElementById("shownumrows").style.display = "none"; // Radera denna r
 
 /* När sidan laddat ska den läsa in nedanstående funktioner. Gör en funktion för varje sak som ska görasp*/
 
-window.addEventListener("load", async () => { // upon loading it starts the function below
-    let channels = await FetchRadioChannels();// response = fetch JSON (connection)
-    await ShowRadioChannels(channels);
-});
+//async är valt pga att vi använder fetch API som är async
 
-async function FetchRadioChannels(){
-     let request = await fetch("https://api.sr.se/api/v2/channels/?format=JSON");// response = fetch JSON (connection)
+async function FetchRadioChannelById(id){ // gets information about the channels and if no value of how many it fetches all
+    let url =  "https://api.sr.se/api/v2/channels/"+id+"?format=JSON";
+    let request = await fetch(url);// response = fetch JSON (connection)
      return JSON.parse(await request.text()); // Turns the text to objects and array after awaiting respons (gets result from connection)
 };
 
-async function ShowRadioChannels(channels){ //shows channels with 
+
+window.addEventListener("load", async () => { // upon loading it starts the function below
+    
+    await ShowRadioChannels(10);
+    let numrows = document.getElementById('numrows'); // gets element numrows
+
+    ShowChannelsDropdown();
+    
+    numrows.addEventListener('change', async (event) => { //adds an event om change
+        let NoOfChannels = event.target.value; 
+        await ShowRadioChannels(NoOfChannels);
+    });
+
+    let playbutton = document.getElementById('playbutton')
+    playbutton.addEventListener("click", async () => {
+        let id = document.getElementById("playchannel").value;
+        let channel = await FetchRadioChannelById(id)
+        let player = document.getElementById('radioplayer')
+        player.innerHTML= '<audio controls="" autoplay=""><source src="'+channel.channel.liveaudio.url+'" type="audio/mpeg"></audio>'
+    });
+});
+
+async function FetchRadioChannels(Numb){ // gets information about the channels and if no value of how many it fetches all
+    let url =  "https://api.sr.se/api/v2/channels/?format=JSON";
+    if (Numb) {
+        url += "&size="+Numb; // for ShowRadioChannels
+    }
+    else {
+        url += '&pagination=false'; // gives the dropdown list all channels 
+    }
+    let request = await fetch(url);// response = fetch JSON (connection)
+     return JSON.parse(await request.text()); // Turns the text to objects and array after awaiting respons (gets result from connection)
+};
+
+async function ShowRadioChannels(Numb){ //shows channels with 
+    let channels = await FetchRadioChannels(Numb);// response = fetch JSON (connection)
     let mainnavlist = document.getElementById("mainnavlist");
+    mainnavlist.innerHTML = "" 
     for(let i=0;i<channels.channels.length;i++){ //Loops as long as i is less than the arra
         mainnavlist.innerHTML += '<li><a title="'+channels.channels[i].tagline+'" onclick="ShowRadioSchedual('+channels.channels[i].id+');">'+channels.channels[i].name+'</a></li>'
+    }    
+};
+
+async function ShowChannelsDropdown(){ //shows channels with 
+    let channels = await FetchRadioChannels();// response = fetch JSON (connection)
+    let playchannel = document.getElementById("playchannel");
+    playchannel.innerHTML = "" 
+    for(let i=0;i<channels.channels.length;i++){ //Loops as long as i is less than the arra
+        playchannel.innerHTML += '<option value="'+channels.channels[i].id+'">'+channels.channels[i].name+'</option>';
+        //  playchannel.innerHTML += '<li><a title="'+channels.channels[i].tagline+'" onclick="ShowRadioSchedual('+channels.channels[i].id+');">'+channels.channels[i].name+'</a></li>'
     }    
 };
 
@@ -81,6 +125,7 @@ async function ShowRadioSchedual(channelId){
         info.innerHTML += '</article>';
     };
 };
+
 
 
 
