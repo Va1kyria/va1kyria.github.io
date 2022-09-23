@@ -31,7 +31,6 @@ function CheckItemText(){ //Validates To Do
         return false; // jumps out of the function if less than 5
     }
     
-
     button.disabled=false; 
     message.innerHTML =""; //sets the message to empty and enables the button when more than 5 signs
     return true;
@@ -46,7 +45,7 @@ function CreateNewTask() { //creates new task
     var input = NewToDo.value; 
 
     if (CheckItemText() === false){
-        return;
+        return; //jump out of function
     } 
 
     AddTaskToWebbStorage(input); // execute 
