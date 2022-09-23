@@ -28,9 +28,8 @@ window.addEventListener("load", async () => { // upon loading it starts the func
     await ShowRadioChannels(10);
     let numrows = document.getElementById('numrows'); // gets element numrows
 
-    await ShowChannelsDropdown();
-    ShowAllSchedules();
-
+    ShowChannelsDropdown();
+    
     numrows.addEventListener('change', async (event) => { //adds an event om change
         let NoOfChannels = event.target.value; 
         await ShowRadioChannels(NoOfChannels);
@@ -45,42 +44,6 @@ window.addEventListener("load", async () => { // upon loading it starts the func
     });
 });
 
-async function FetchAllSchedules(channelId){ 
-
-    let request = await fetch("http://api.sr.se/api/v2/scheduledepisodes/rightnow?channelid=" + channelId + "&format=json&indent=true&pagination=false");
-    return JSON.parse(await request.text());
-  
-}
-
-async function ShowAllSchedules(){
-    
-    let info = document.getElementById("info")
-    info.innerHTML = ""
-    
-    for(let i=0;i<window.AllChannels.channels.length;i++){ //Loops as long as i is less than the array
-    
-   
-    //}
-        info.innerHTML += '<article>';
-        info.innerHTML += '<H3>'+window.AllChannels.channels[i].name+'</H3>';
-        //info.innerHTML += '<br>';
-        let channelInfo = await FetchAllSchedules(window.AllChannels.channels[i].id);
-        if (!channelInfo.channel.currentscheduledepisode){
-            continue;
-        }
-        if (channelInfo.channel.currentscheduledepisode.title){
-        info.innerHTML += '<H5>'+channelInfo.channel.currentscheduledepisode.title+'</H5>';
-        }     
-        //info.innerHTML += '<br>'
-        if (channelInfo.channel.currentscheduledepisode.subtitle){
-        info.innerHTML += channelInfo.channel.currentscheduledepisode.subtitle; 
-        }   
-        console.log(channelInfo)
-     
-    
-    info.innerHTML += '</article>'
-    }
-}
 
 
 async function FetchRadioChannels(Numb){ // gets information about the channels and if no value of how many it fetches all
@@ -99,17 +62,17 @@ async function ShowRadioChannels(Numb){ //shows channels with
     let channels = await FetchRadioChannels(Numb);// response = fetch JSON (connection)
     let mainnavlist = document.getElementById("mainnavlist");
     mainnavlist.innerHTML = "" 
-    for(let i=0;i<channels.channels.length;i++){ //Loops as long as i is less than the array
+    for(let i=0;i<channels.channels.length;i++){ //Loops as long as i is less than the arra
         mainnavlist.innerHTML += '<li><a title="'+channels.channels[i].tagline+'" onclick="ShowRadioSchedual('+channels.channels[i].id+');">'+channels.channels[i].name+'</a></li>'
     }    
 };
 
 async function ShowChannelsDropdown(){ //shows channels with 
-    window.AllChannels = await FetchRadioChannels();// response = fetch JSON (connection)
+    let channels = await FetchRadioChannels();// response = fetch JSON (connection)
     let playchannel = document.getElementById("playchannel");
     playchannel.innerHTML = "" 
-    for(let i=0;i<window.AllChannels.channels.length;i++){ //Loops as long as i is less than the arra
-        playchannel.innerHTML += '<option value="'+window.AllChannels.channels[i].id+'">'+window.AllChannels.channels[i].name+'</option>';
+    for(let i=0;i<channels.channels.length;i++){ //Loops as long as i is less than the arra
+        playchannel.innerHTML += '<option value="'+channels.channels[i].id+'">'+channels.channels[i].name+'</option>';
         //  playchannel.innerHTML += '<li><a title="'+channels.channels[i].tagline+'" onclick="ShowRadioSchedual('+channels.channels[i].id+');">'+channels.channels[i].name+'</a></li>'
     }    
 };

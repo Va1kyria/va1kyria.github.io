@@ -19,11 +19,18 @@ newtodo.addEventListener("keyup", CheckItemText);//Checks the length of the text
 function CheckItemText(){
     var input = NewToDo.value; 
 
+    if (input === "") {
+        message.innerHTML = ""; // gives a message if less than 5 signs 
+        button.disabled=true; //Disables the button so the task cant be added
+        return; // jumps out of the function if less than 5
+    }
+    
     if (input.length < 5) {
         message.innerHTML = "5 signs minimum"; // gives a message if less than 5 signs 
         button.disabled=true; //Disables the button so the task cant be added
         return; // jumps out of the function if less than 5
     }
+    
 
     button.disabled=false; 
     message.innerHTML =""; //sets the message to empty and enables the button when more than 5 signs
@@ -31,6 +38,7 @@ function CheckItemText(){
 
 function LoadPage(){ //loads page
     GetTasksFromWebStorage();
+    CheckItemText();
 };
 
 function CreateNewTask() { //creates new task
