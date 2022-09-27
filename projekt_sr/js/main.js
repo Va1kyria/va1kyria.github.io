@@ -33,7 +33,7 @@ window.addEventListener("load", async () => { // upon loading it starts the func
 
 async function FetchAllSchedules(channelId){ 
 
-    let request = await fetch("http://api.sr.se/api/v2/scheduledepisodes/rightnow?channelid=" + channelId + "&format=json&indent=true&pagination=false");
+    let request = await fetch("https://api.sr.se/api/v2/scheduledepisodes/rightnow?channelid=" + channelId + "&format=json&indent=true&pagination=false");
     return JSON.parse(await request.text());
   
 };
