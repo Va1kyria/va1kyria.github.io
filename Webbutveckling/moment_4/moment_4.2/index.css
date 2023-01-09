@@ -163,18 +163,18 @@ footer p {
         grid-template-columns: auto;
         grid-template-rows:    10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
         grid-template-areas: 
-        "logo     .       .       .       .       kurser  kurser  kurser  kurser  kurser "
-        "  ar       ar      ar      ar      .     kurser  kurser  kurser  kurser  kurser"
-        " ar       ar      ar      ar      .       kurser  kurser  kurser  kurser  kurser"
+        "logo     .       .       .         .       kurser  kurser  kurser  kurser  kurser "
+        "  ar       ar      ar      ar      .       kurser  kurser  kurser  kurser  kurser"
+        " ar       ar      ar      ar       .       kurser  kurser  kurser  kurser  kurser"
         " pic1     pic1    pic1    pic1     .       pic3     pic3     pic3  pic3    pic3"
         "  pic1     pic1    pic1    pic1    .       pic3     pic3     pic3  pic3    pic3"
         " pic2     pic2   pic2    pic2      .       pic4    pic4    pic4   pic4    pic4"
         "  pic2    pic2     pic2   pic2     .       pic4    pic4    pic4   pic4    pic4"       
-        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2       .        ."
-        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2   .        ."
+        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
+        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
         "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
         "kurser2 kurser2 kurser2 kurser2 kurser2 kurser2 kurser2   kurser2  .        ."
-        ".      .      .      .      .      .      .      .      .      .      "
+        "   .      .        .      .      .        .      .        .        .        .   "
         "footer  footer  footer  footer footer  footer  footer  footer  footer  footer";
     }
     #logo {

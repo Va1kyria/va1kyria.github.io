@@ -1,9 +1,15 @@
-body {
-    background-color: #424141;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0%;
 }
 container {
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -11,65 +17,106 @@ container {
     ". he ."
     ". he ."
     ". he ."
-    ". link ."
-    ". link ."
-    ". link .";
+    ". button ."
+    ". button ."
+    ". button ."
+    ". . .";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+  
 }
 #HeaderFp {
+    margin: 0%;
+    padding: 0%;
+    padding-top: 15%;
     text-align: center;
     grid-area: he;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 45% 15% 20%;
+    grid-template-areas: 
+    "."
+    "h1"
+    "h2"
+    "h4"
+}
+#NameFp {
+    grid-area: h1;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Marck Script', cursive;
+    font-weight: 200;
+    font-size: 6rem;
+}
+#DevFp {
+    grid-area: h2;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+#ProgFp {
+    grid-area: h4;
+    margin: 0%;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+#ButtonsContainerFp {
+    grid-area: button;
     display: inline-grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: 10% 20% 20% 20% 30%;
     grid-template-areas: 
-    ". h1 ."
-    ". h2 ."
-    ". h4 ."
+    " . "
+    " p  "
+    " a "
+    " c "
+    " . ";
 }
-#linksfp {
-    grid-area: link;
-    display: inline-grid;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    ". p ."
-    ". a ."
-    ". c .";
-}
-#linksfp a {
-    color: white;
-    background-color: #BE0000;
-    text-decoration: none;
-    border: 2px solid black; 
+
+Button {
     text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 100;
+    background-color: #BE0000;
+    border: 2px solid black;
+    margin: 1%;
     padding:0%;
-    margin:0%;
-    
-    }
+    width:25rem;
+    height:5rem;
+    margin-left:auto;
+    margin-right: auto;
+}
+button a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
 #linksfp a:hover{
     box-shadow: 0 14px 14px 0 rgba(0,0,0,0.5); 
 }
 #linksfp a:visited {
     color: lightgray;
 }
-h1 {
-    grid-area: h1;
-}
-h2 {
-    grid-area: h2;
-}
-h4 {
-    grid-area: h4;
-}
-#PortfolioFp {
+
+#PortfolioButtonFp {
     grid-area: p;
 }
-#AboutMeFp {
+#AboutMeButtonFp {
     grid-area: a;
+
 }
-#ContactMeFp {
+#ContactMeButtonFp {
     grid-area: c;
+
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
 }
