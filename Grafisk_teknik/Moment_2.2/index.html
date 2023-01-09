@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Startsida</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <img class="logo"src="logo.svg" alt="logo Gaeas"/>
+        <div class="topnav">
+            <div id ="nav_links">    
+                <a href = "index.html">Startsida</a>
+                <a href = "index_om_mig.html">Om mig</a>
+                <a href = "index_bildbehandling.html">Bildbehandling</a>    
+            </div>
+        </div>
+        </div>
+    </header>
+    <picture> <!--https://www.w3schools.com/tags/tag_picture.asp-->
+        <source  srcset="bilder/stor_bild.jpg" media="(min-width: 1521px)">
+        <source media="(min-width: 801px)" srcset="bilder/mellan_bild.jpg">
+        <source media="(max-width: 800px)" srcset="bilder/liten_bild.jpg">
+        <img class="headpic"src="bilder/stor_bild.jpg" alt="Råttunge i barns famn">
+    </picture> 
+    <div class="produkter">
+        <h1>Senaste produkterna</h1>
+        <img class="img01" src="bilder\frilagning01.png" alt="Svart råtta" />
+        <img class="img02" src="bilder\frilaggning02.png" alt="svart silvermane råtta" />
+        <img class="img03" src="bilder\frilaggning03.png" alt="Svart hooded råtta" />
+    </div>
+    <div class="background">
+        <div class="text_background">
+            <h3>Webbutvecklingsprogrammet <br/>mittuniversitetet</h3>
+                <button id="button">Sök här</button> <!--https://www.w3schools.com/tags/tag_button.asp-->
+        </div>       
+    </div>    
+    <div class="banner">
+        <img class="banner_pic" src="/bilder/reklam_banner.gif" alt="banner reklam"/>        
+    </div>
+    <footer>
+        <div class="p1">
+            <p>Laborationsuppgift för kursen DT200, Grafisk design för webb<br/>
+            Ⓒ Mikaela Frendin 2022</p>
+        </div>
+    </footer>    
+</body>
+

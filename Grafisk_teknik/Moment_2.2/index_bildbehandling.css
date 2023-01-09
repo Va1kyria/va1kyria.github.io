@@ -1,0 +1,40 @@
+body {
+    background-color: #f5F2Ea;
+}
+h1{
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #E75A7C;
+    text-align: center;
+    padding-top: 5%;
+    Padding-bottom: 5%;;
+}
+h2{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #E75A7C;
+    text-align: center;
+}
+.fargstick_org {
+    object-fit: contain;
+    padding-left: 8.5%;
+    padding-bottom: 5%;
+    max-width: 81%;
+}
+.fargstick {
+    padding-left: 10%;
+    padding-bottom: 5%;
+    max-width: 79%;
+}
+.handkolering_original {
+    padding-left: 8.5%;
+    padding-bottom: 10%;
+    max-width: 81%;
+}
+.handkolering {
+    padding-left: 10%;
+    padding-bottom: 10%;
+    max-width: 79%;
+}

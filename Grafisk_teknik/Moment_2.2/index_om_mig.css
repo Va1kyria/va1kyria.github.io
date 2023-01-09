@@ -1,0 +1,36 @@
+.jag {
+    border-radius: 100%; /*https://www.w3schools.com/cssref/css3_pr_border-radius.php*/
+    float: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 10%;
+    max-width: 84%;
+    max-height: 99%;    
+}
+h1{
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #E75A7C;
+    text-align: center;
+    max-width: 100vw;
+}
+h2{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #E75A7C;
+    text-align: center;
+    max-width: 100vw;
+}
+body {
+    background-color: #f5F2Ea;
+    max-width: 100%;
+}
+.uppgift_text {
+    padding-bottom: 20%;
+    max-width: 100vw;
+}
+div.text_align {
+    max-width: 100vw;
+}

@@ -1,0 +1,660 @@
+
+body {
+    background-color: lightgray;
+    margin:0%;
+    padding:0%;
+}
+
+.grid {
+    display: inline-grid;
+    width: 100vw;
+    gap:5px;
+    background-color: grey;
+    height: auto;
+    position: fixed;
+    grid-template-rows: 10px 10px 10px 10px 10px 20px;
+    grid-template-columns: 5% 15% 10% 10% 10% 10% 5% 15% 10% 10% ;
+}
+nav {
+    grid-column-start:7;
+    grid-column-end:11;
+    grid-row-start:2;
+    position: relative;
+}
+
+/*Nav bar- sourse  https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+li {
+    display: inline;
+   
+  }
+li a {
+
+    background-color: #9e1e1e;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px  solid black;
+    display: inline-block;
+    max-width:60px;
+    min-width: 60px;
+    font-weight: bolder;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/    
+  }
+  
+
+ li a:hover {
+    background-color: lightgray;
+    color: black;
+  }
+  li a:active {
+    background-color: white;
+    color: black;
+  }
+li a:visited {
+    background-color: #bc3b3b;
+ }
+
+  #logo {
+    padding-left: 10%;
+    padding-top: 2%;
+    position: absolute;
+  }
+
+  .navul {
+    padding-top:5%
+  }
+
+  /*The articles*/
+.gridart {
+    display: inline-grid;
+    width: 100vw;
+    height: 100%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 5% 25% 8% 25% 8% 25% 5%;
+}
+.background {
+    height:auto;
+    border: 2px  solid black;
+    background-color: #bababa;
+}
+article {
+    padding-top:35%;
+    
+}
+#morotter {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    
+}
+#tamrattor {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+#jul {
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+#carrots {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+#imgcar {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+#morotter h2 {
+    grid-column-start:2;
+    grid-row-start:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#morotter p {
+    grid-column-start:2;
+    grid-row-start:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#rats {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+#imgrats {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+#tamrattor h2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tamrattor p {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+#christmas{
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+#imgchr {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#jul h2{
+    grid-column-start: 6;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#jul p{
+    grid-column-start: 6;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/*Footer*/
+footer {
+    margin: 0%;
+    grid-column-start:1;
+    grid-column-end:8;
+    grid-row-start:11;
+    grid-row-end:12;
+    display: inline-grid;
+    background-color: grey;
+    height: 100%;
+    width: 100vw;
+    grid-template-rows: 5% 15% 5% 15% 5% 15% 5% 15% 5% 10%;
+    grid-template-columns: 5% 25% 8% 25% 8% 25% 5%  ;
+}
+footer h2 {
+    grid-column-start:3;
+    grid-column-end:6;
+    grid-row-start:1;
+    grid-row-end:3;
+    text-align: center;
+}
+#name {
+    margin: 0%;
+    grid-column-start:6;
+    grid-column-end:7;
+    grid-row-start: 6;
+    padding-left:20%;
+    padding-top: 3%;
+}
+#date {
+    margin: 0%;
+    grid-column-start:6;
+    grid-column-end:7;
+    grid-row-start:4;
+    padding-left:20%;
+}
+#link {
+    grid-column-start: 6;
+    grid-row-start: 7;
+    padding-left: 20%;
+
+}
+
+footer a {
+    color: lightgrey;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    border: 2px  solid black;
+    max-width:60px;
+    min-width: 60px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+    background-color: #9e1e1e;
+    
+}
+footer a:hover {
+    background-color: lightgray;
+    color: black;
+  }
+  footer a:active {
+    background-color: white;
+    color: black;
+  }
+  footer a:visited {
+
+    background-color: #bc3b3b;
+  }
+#index {
+    grid-column-start: 2;
+    padding-left:10%; 
+    grid-row-start:4;  
+}
+
+#coursers {
+    grid-column-start: 2;
+    padding-left:10%;  
+    grid-row-start:6;  
+}
+
+#pictures {
+    grid-column-start: 2;
+    padding-left:10%; 
+    grid-row-start:8;   
+}
+
+#contact {
+    grid-column-start: 2;
+    padding-left:35%;
+    grid-row-start:6;    
+}
+
+#about {
+    grid-column-start: 2;
+    padding-left:35%; 
+    grid-row-start:8;   
+}
+
+@media only screen and (max-width: 1200px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    nav {
+        grid-column-start:6;
+        grid-column-end:11;
+        grid-row-start:2;
+    }
+}
+@media only screen and (max-width: 1000px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    nav {
+        grid-column-start:5;
+        grid-column-end:11;
+        grid-row-start:2;
+    }
+}
+
+@media only screen and (max-width: 900px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    /*Footer*/
+    .gridart {
+        display: inline-grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-columns: 5% 25% 8% 25% 8% 25% 5%  ;
+    }    
+    footer {
+        margin: 0%;
+        grid-column-start:1;
+        grid-column-end:8;
+        grid-row-start:11;
+        grid-row-end:26;
+        display: inline-grid;
+        background-color: grey;
+        height: 100%;
+        grid-template-rows: 5% 15% 5% 15% 5% 15% 5% 15% 5% 10%;
+        grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%  ;
+    }
+    footer h2 {
+        grid-column-start:2;
+        grid-column-end:19;
+        grid-row-start:1;
+        grid-row-end:3;
+        text-align: center;
+    }
+    #name {
+        margin: 0%;
+        grid-column-start:2;
+        grid-column-end:9;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+
+    
+    }
+    #date {
+        margin: 0%;
+        grid-column-start:9;
+        grid-column-end:14;
+        grid-row-start:5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+    }
+    #link {
+        grid-column-start: 15;
+        grid-column-end: 21;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    footer a {
+        color: lightgrey;
+        text-align: center;
+        padding: 2px;
+        text-decoration: none;
+        border: 2px  solid black;
+        max-width:60px;
+        min-width: 60px;
+        font-size: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+        background-color: #9e1e1e;
+    }
+    footer a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      footer a:active {
+        background-color: white;
+        color: black;
+      }
+      footer a:visited {
+        background-color: #bc3b3b;
+      }
+    #index {
+        grid-column-start: 2;
+        grid-row-start:9;  
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    #coursers {
+        grid-column-start: 6;
+        grid-row-start:9;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #pictures {
+        grid-column-start: 10;
+        grid-row-start:9;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #contact {
+        grid-column-start: 14;
+        grid-row-start:9;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #about {
+        grid-column-start: 18;
+        grid-row-start:9;
+        margin: 0%;
+        padding: 0%;  
+    }
+}
+
+@media only screen and (max-width: 800px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    nav {
+        grid-column-start:4;
+        grid-column-end:11;
+        grid-row-start:2;
+    }
+}
+@media only screen and (max-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    .gridart {
+        display: inline-grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+        grid-template-columns: 5% 25% 8% 25% 8% 25% 5%  ;
+    }
+    header nav {
+        grid-column-start:7;
+        grid-column-end:11;
+        grid-row-start:2;
+        overflow: hidden;
+        
+    }
+    
+        #morotter {
+        grid-column-start: 2;
+        grid-column-end:7;
+        grid-row-start: 3;
+        grid-row-end: 8;
+        padding:0%;
+        margin: 0%;
+    }
+    
+    #tamrattor {
+        grid-column-start: 2;
+        grid-column-end:7;
+        grid-row-start: 8;
+        grid-row-end: 14;
+        padding:0%;
+        margin: 0%;
+    }
+    #tamrattorbackground {
+        padding-bottom:12%;
+        margin: 0%;
+    }
+    #jul {
+        grid-column-start: 2;
+        grid-column-end:7;
+        grid-row-start: 15;
+        grid-row-end: 22;
+        padding:0%;
+        margin: 0%;
+    }
+    #imgcar {
+        grid-column-start:2;
+        grid-row-start:2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #morotter h2 {
+        grid-column-start:2;
+        grid-row-start:2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #morotter p {
+        grid-column-start:2;
+        grid-row-start:2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    div #imgrats {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #tamrattor h2 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #tamrattor p {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    
+    }
+    #imgchr{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #jul h2{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #jul p{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    /*Footer*/
+    footer {
+        margin: 0%;
+        grid-column-start:1;
+        grid-column-end:8;
+        grid-row-start:23;
+        grid-row-end:26;
+        display: inline-grid;
+        background-color: grey;
+        height: 100%;
+        grid-template-rows: 5% 15% 5% 15% 5% 15% 5% 15% 5% 10%;
+        grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%  ;
+    }
+    footer h2 {
+        grid-column-start:2;
+        grid-column-end:19;
+        grid-row-start:1;
+        grid-row-end:3;
+        text-align: center;
+    }
+    #name {
+        margin: 0%;
+        grid-column-start:2;
+        grid-column-end:9;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+
+    
+    }
+    #date {
+        margin: 0%;
+        grid-column-start:9;
+        grid-column-end:14;
+        grid-row-start:5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+    }
+    #link {
+        grid-column-start: 15;
+        grid-column-end: 21;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    footer a {
+        color: lightgrey;
+        text-align: center;
+        padding: 2px;
+        text-decoration: none;
+        border: 2px  solid black;
+        max-width:60px;
+        min-width: 60px;
+        font-size: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+        background-color: #9e1e1e;
+    }
+    footer a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      footer a:active {
+        background-color: white;
+        color: black;
+      }
+      footer a:visited {
+        color: #bc3b3b
+      }
+    #index {
+        grid-column-start: 2;
+        grid-row-start:8;  
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    #coursers {
+        grid-column-start: 6;
+        grid-row-start:8;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #pictures {
+        grid-column-start: 10;
+        grid-row-start:8;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #contact {
+        grid-column-start: 14;
+        grid-row-start:8;
+        margin: 0%;
+        padding: 0%;   
+    }
+    
+    #about {
+        grid-column-start: 18;
+        grid-row-start:8;
+        margin: 0%;
+        padding: 0%;  
+    }
+    }

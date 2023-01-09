@@ -1,0 +1,112 @@
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    background-color: #363535; /*https://www.google.com/search?q=colour+hex+code+picker&oq=colour+hex&aqs=chrome.2.69i57j0i10i512j0i512j0i10i512l2j0i512j0i10i512l4.8654j0j7&sourceid=chrome&ie=UTF-8*/
+    color:white;
+}
+header {
+    text-align: center;
+    padding-top: 2%;
+}
+#img1 {
+    object-fit:cover;
+    width: 100vw;
+    padding-bottom: 4%;
+    max-width: 100%;
+}
+header h4 {
+    padding-top: 3%;
+}
+h1 {
+    background-color: #5e5c5c;
+     /*https://www.w3schools.com/css/css_inline-block.asp*/
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}   
+h2 {
+    background-color: #5e5c5c;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: xx-large;
+}   
+h3 {
+    background-color: #5e5c5c;
+    display: flexbox;
+    padding:0.4%;
+    text-align:  center;
+}
+.flexbox h3 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+p {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+.flexbox {
+    display: flex;
+    float: none;
+    padding-top: 3%;
+}
+.flex0 {
+    flex:0.5
+}
+.flex1 {
+    flex: 1;
+    padding-top: 1%;
+}
+.flex2 {
+    flex: 1;
+    padding-top: 1%;
+}
+.information_utbildning {
+    padding-top: 3%;    
+}
+.framtiden {
+    text-align: center;
+    padding-top: 3%;
+}
+.arbetsmarknaden {
+    padding-top: 3%;
+}
+.kompetens  {
+    text-align: center;
+    padding-top: 3%;
+}
+.sammarbete {
+    text-align: center;
+    padding-top: 3%;
+}
+.sammankomster {
+    padding-top: 3%;
+}
+#img2 {
+    max-width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.citat {
+    text-align: center;
+    font-style: italic;
+}
+.efter_utbildningen {
+    text-align: center;
+    padding-top: 3%;
+}
+#img_marie {
+    padding-top: 5%;
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .flexbox {
+      display: block;
+    }
+  }

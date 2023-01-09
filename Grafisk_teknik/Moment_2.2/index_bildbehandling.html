@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Startsida</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_bildbehandling.css">
+</head>
+<body>
+    <header>
+        <img class="logo"src="logo.svg" alt="logo Gaeas"/>
+        <div class="topnav">
+            <div id ="nav_links">    
+                <a href = "index.html">Startsida</a>
+                <a href = "index_om_mig.html">Om mig</a>
+                <a href = "index_bildbehandling.html">Bildbehandling</a>    
+            </div>
+        </div>
+        </div>
+    </header>
+    <picture>
+        <source  srcset="bilder/stor_bild.jpg" media="(min-width: 1521px)">
+        <source media="(min-width: 801px)" srcset="bilder/mellan_bild.jpg">
+        <source media="(max-width: 800px)" srcset="bilder/liten_bild.jpg">
+        <img class="headpic"src="bilder/stor_bild.jpg" alt="Råttunge i barns famn">
+    </picture>     
+    <h1>Bildbehandling</h1>
+    <h2>Färgstick</h2>
+    <picture>
+        <source srcset="Undersida_bilder\fargstick_fore.webp">
+        <img class="fargstick_org"src="Undersida_bilder\fargstick_fore.jpg" alt="Oredigerad bild av stadsmiljö i snö" style="width:auto;">
+    </picture>
+    <picture>
+        <source srcset="Undersida_bilder\fagstick.webp">
+        <img class="fargstick"src="Undersida_bilder\fagstick.jpg" alt="Redigerad bild av stadsmiljö i snö">
+    </picture>
+    <h2>Handkolering och retusch</h2>
+    <picture>
+        <source srcset="Undersida_bilder\handkolorering_original.webp">
+        <img class="handkolering_original"src="Undersida_bilder\handkolorering_original.jpg" alt="Oredigerad bild av häst med barn och släde">
+    </picture>
+    <picture>
+        <source srcset="Undersida_bilder\handkolering.webp">
+        <img class="handkolering"src="Undersida_bilder\handkolering.jpg" alt="Oredigerad bild av häst med barn och släde">
+    </picture>
+    <footer>
+        <div class="p1">
+            <p>Laborationsuppgift för kursen DT200, Grafisk design för webb<br/>
+            Ⓒ Mikaela Frendin 2022</p>
+        </div>
+    </footer>    
+</body>
+

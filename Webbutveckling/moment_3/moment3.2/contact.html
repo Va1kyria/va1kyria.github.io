@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="Skoluppgift" content="uppg 3.2">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    
+ <!--https://www.w3schools.com/howto/howto_js_mobile_navbar.asp--> 
+
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <div class="grid">
+            <img id="logo" src="logo.webp" alt="logo gaeas">
+            <nav>
+                <ul class="navul">
+                    <li>
+                        <a href="index.html">Startsida</a>
+                    </li>
+                    <li>    
+                        <a href="courses.html">Kurser</a>
+                    </li>
+                    <li>    
+                        <a href="pictures.html">Bilder</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Om</a>
+                    </li>
+                </ul>
+                <!--
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> -->
+                    <i class="fa fa-bars"></i> <!--https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
+                  <!--</a>--> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="gridart">
+        <h3 id="contactme">
+            Kontakta mig gärna genom formuläret nedan
+        </h3>
+       <div id="formbox">        
+        <form id="contactform"> <!--https://www.w3schools.com/html/html_forms.asp-->
+            <fieldset style="width:200px">
+                
+                <legend>
+                    <h2>
+                        Kontaktformulär
+                    </h2>
+                </legend>
+                
+                <label for="namelabel">
+                    Namn
+                </label>
+                
+                <input type="text" id="namelabel" name="name" placeholder="Förnamn Efternamn"> <!--https://www.w3schools.com/tags/att_input_value.asp-->
+                
+                <br /> <!--https://stackoverflow.com/questions/3610540/how-to-define-a-default-value-for-input-type-text-without-using-attribute-val-->
+                <br />
+                
+                <label for="email">
+                    E-postadress
+                </label>
+                
+                <input type="email" id="email" name="email" placeholder="namn@domän.se">
+                
+                <br />
+                <br />
+                
+                <label for="professions"> <!--https://www.w3schools.com/html/html_form_elements.asp-->
+                    Yrke
+                </label>
+                
+                <select name="professions" id="professions">
+                    <option value="Arbetsförmedlare">Arbetsförmedlare</option>
+                    <option value="Bustillverkare">Bustillverkare</option>
+                    <option value="Codemonkey">Codemonkey</option>
+                    <option value="Dataanalytiker">Dataanaalytiker</option>
+                    <option value="Elektriker">Elektriker</option>
+                    <option value="Filmjölkstestare">Filmjölkstestare</option>
+                    <option value="Gåsuppfödare">Gåsuppfödare</option>
+                </select>
+                
+                <br />
+                <br />
+                
+                <label for="news">
+                    Nyhetsbrev
+                </label>               
+                
+                <input type="checkbox" id="news" value="news">
+                
+                <br />
+                <br />
+                
+                <label for="hierdyes">
+                    Anställd
+                </label>
+                
+                <input type="radio" id="hierdyes" name="hierdyes" value="Ja">
+                
+                <label for="hierdyes">
+                    Ja
+                </label>
+
+                <input type="radio" id="hierdno" name="hierdno" value="Nej">
+                
+                <label for="hierdno">
+                    Nej
+                </label>
+
+                <br />
+                <br />
+                
+                <label for="message">
+                    Meddelande
+                </label>
+                
+                <br />
+                
+                <textarea rows="4" cols="45" id="message" name="message">      
+                </textarea>
+                
+                <br />
+                
+                <input id="submit" type="submit" value="Skicka">
+                <input id="reset" type="reset" value="Nolställ">
+            
+            </fieldset>    
+        </form>
+    </div>
+
+    <footer> 
+        
+        <h2>
+            DT057G Datateknik GR (A), Webbutveckling I, 7,5 hp
+        </h2>
+        <h4 id="date">
+            2022-11-01
+        </h4>
+        <h4 id="name">
+            Mikaela Frendin
+        </h4>
+        <h4 id="link">
+            <a href="mailto:mifr2204@student.miun.se">Skicka mail</a>
+        </h4>
+        <div id="index">
+            <a href="index.html">Startsida</a>
+        </div>
+        <div id="coursers">   
+            <a href="courses.html">Kurser</a>
+        </div>
+        <div id="pictures">    
+            <a href="pictures.html">Bilder</a>
+        </div>
+        <div id="contact">
+            <a href="contact.html">Kontakt</a>
+        </div>
+        <div id="about">
+            <a href="about.html">Om</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+

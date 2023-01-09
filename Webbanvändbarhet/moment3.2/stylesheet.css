@@ -1,0 +1,22 @@
+.topnav {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 800px) { /*https://www.w3schools.com/css/css3_flexbox_responsive.asp*/
+    .topnav {
+        flex-direction: column;
+    }
+}
+
+/*
+.hemlink {
+    display: flex;
+    justify-content: start;
+}
+
+.navleft {
+    display: flex;
+    justify-content: end;
+}
+*/
