@@ -123,14 +123,12 @@ button:hover{
         font-size: 50%;
     }
 }
-
 /*Portfolio*/
 #ContainerPo {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:    
-    "headpo headpo headpo headpo"
     ". PPres PPres ."
     "line1 line1 line1 line1"
     "PCont PCont PCont PCont"
@@ -138,31 +136,39 @@ button:hover{
     "footer footer footer footer";
     background-color: #424141;
     color: white;
-    max-width: 1024px;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 #HeaderPo {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #202020;
+    width: 100%;
+    padding-top: 2%;
     display: grid;
-    grid-area: headpo;
-    margin-right: 3%;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
     "logo . nav";
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 80px;
 }
 #LogoButton {
     margin: 0%;
     margin-left: 10%;
     grid-area: logo;
-    background-color:#424141;
+    background-color: rgba(0,0,0,0);
     border: none;
     margin-top: 8%;
     font-family: 'Marck Script', cursive;
 }
 #LogoButton a {
     font-size: 3rem;
+}
+nav {
+    margin-right: 2%;
 }
 nav button {
     max-width: 17%;
@@ -214,6 +220,11 @@ nav button {
     margin-right: auto;
     text-align: center;
     margin-bottom: 20%;
+}
+button:disabled {
+    background-color: grey;
+    color: black;
+    font-size: 2rem;
 }
 .port button {
     max-width: 60%;
@@ -279,4 +290,98 @@ footer {
 }
 #MailFoot {
     grid-area: mailfoot;
+}
+#ContainerP01 { /*Main container*/
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "empty empty empty empty"    
+    "HCP2 HCP2 HCP2 HCP2"
+    "PC PC PC PC"
+    "lp2 lp2 lp2 lp2"
+    "footer footer footer footer";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#empty {
+    grid-area: empty;
+    height:100px;
+}
+/*Container for the portfolio headers*/
+#HeadContPort2 {
+    grid-area: HCP2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "HP2"
+    "H2P2";
+    background-color: #303030;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding-bottom: 3%;
+    
+} 
+#HeadPort2{  /*Header H1*/
+    grid-area: HP2;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4rem;
+}
+#Head2Poet2 { /*Header h3*/
+    grid-area: H2P2;
+    margin: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+/*Container for the projects*/
+#ProjectsCont {
+    grid-area: PC;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "P1 ."
+    ;
+    margin-top: 15%;
+    margin-bottom: 15%;
+
+}
+#Project1 {
+    grid-area: P1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "hs1"
+    "img1"
+    "more1"
+    ;
+    text-align: center;
+}
+#HeaderStudera {
+    grid-area: hs1;
+
+}
+img{
+    grid-area: img1;
+    max-width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#MoreToCome {
+    grid-area: more1;
+}
+#LinePo2 {
+    grid-area: lp2;
 }
