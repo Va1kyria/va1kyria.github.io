@@ -99,7 +99,7 @@ Button {
 button a {
     text-decoration: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 button:hover{
     box-shadow: 0 14px 14px 0 rgba(0,0,0,0.5); 
@@ -109,18 +109,12 @@ button:hover{
 }
 #AboutMeButtonFp {
     grid-area: a;
-
 }
 #ContactMeButtonFp {
     grid-area: c;
 
 }
-/*mobile index*/
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 50%;
-    }
-}
+
 /*Portfolio*/
 #ContainerPo {
     display: grid;
@@ -138,7 +132,6 @@ button:hover{
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;  
-
 }
 #HeaderPo {
     max-width: 1024px;
@@ -151,7 +144,7 @@ button:hover{
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "logo . nav";
+    "logo nav nav";
     position: fixed;
     left: 0;
     right: 0;
@@ -177,11 +170,12 @@ nav button {
     padding: 0%;
     margin: 0.3%;
     margin-top: 2%;
-    max-height: 50%;
+    margin-right: 2%;
+    max-height: 55%;
     float: right;
    grid-area: nav;
+   min-width: 80px;
 }
-
 #PortPres {
     display: flex;
     grid-area: PPres;
@@ -262,8 +256,9 @@ footer {
     grid-area: footer;
     display: grid;
     margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 1.3rem;
+    margin-bottom: 3%;
+    font-size: 1.7rem;
+    font-weight: 100;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -281,9 +276,10 @@ footer {
 #NameFoot {
     grid-area: namefoot;
     font-family: 'Marck Script', cursive;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 4rem;
-    margin:0%
+    margin:0%;
+    margin-bottom: 10%;
 
 }
 #MailFoot {
@@ -497,6 +493,7 @@ form {
     font-size: 1.5rem;
     background-color: #BE0000;
     color: white;
+    height:40px
 }
 #reset {
     margin-left: 40%;
@@ -504,7 +501,43 @@ form {
     max-width: 80px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
+    height:40px
 }
 #LineContact {
     grid-area: LC;
+}
+
+/*mobile index*/
+
+@media screen and (max-width:800px) {
+    #PortPres {
+        max-width:90%
+    }
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #424141;
+    }
+    #SchoolFoot {
+        display: none;
+    }
+    #MailFoot {
+        padding: 0%;
+        margin: 0%;
+        margin-top: 7%
+    }
+    #YearFoot {
+        padding: 0%;
+        margin: 0%;
+        margin-top: 7%;
+        display: none;
+    }
+    form {
+        margin-left:5%
+    }
 }
