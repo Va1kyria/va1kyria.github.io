@@ -6,8 +6,12 @@ html {
 }
 body {
     margin: 0%;
+    background-color: gray;
+    font-family: 'Space Grotesk', sans-serif;
+
 }
-container {
+/*Grid main*/
+#ContFp {
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -27,6 +31,7 @@ container {
     min-height: 100vh;
   
 }
+/*Grid headers*/
 #HeaderFp {
     margin: 0%;
     padding: 0%;
@@ -66,6 +71,7 @@ container {
     font-weight: 300;
     font-size: 2rem;
 }
+/*Grid Buttons*/
 #ButtonsContainerFp {
     grid-area: button;
     display: inline-grid;
@@ -78,7 +84,7 @@ container {
     " c "
     " . ";
 }
-
+/*Buttons index*/
 Button {
     text-align: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -97,13 +103,9 @@ button a {
     color: white;
     font-size: 2rem;
 }
-#linksfp a:hover{
+button:hover{
     box-shadow: 0 14px 14px 0 rgba(0,0,0,0.5); 
 }
-#linksfp a:visited {
-    color: lightgray;
-}
-
 #PortfolioButtonFp {
     grid-area: p;
 }
@@ -115,8 +117,166 @@ button a {
     grid-area: c;
 
 }
+/*mobile index*/
 @media only screen and (max-width: 600px) {
     html {
         font-size: 50%;
     }
+}
+
+/*Portfolio*/
+#ContainerPo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "headpo headpo headpo headpo"
+    ". PPres PPres ."
+    "line1 line1 line1 line1"
+    "PCont PCont PCont PCont"
+    "line2 line2 line2 line2"
+    "footer footer footer footer";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+#HeaderPo {
+    display: grid;
+    grid-area: headpo;
+    margin-right: 3%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo . nav";
+}
+#LogoButton {
+    margin: 0%;
+    margin-left: 10%;
+    grid-area: logo;
+    background-color:#424141;
+    border: none;
+    margin-top: 8%;
+    font-family: 'Marck Script', cursive;
+}
+#LogoButton a {
+    font-size: 3rem;
+}
+nav button {
+    max-width: 17%;
+    padding: 0%;
+    margin: 0.3%;
+    margin-top: 2%;
+    max-height: 50%;
+    float: right;
+   grid-area: nav;
+}
+
+#PortPres {
+    display: flex;
+    grid-area: PPres;
+    font-size: 2.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    font-weight: 200;
+}
+
+.line {
+    background-color: #BE0000;
+    max-height: 100%;
+    margin: 0%;
+    min-height: 100%;
+    margin-top: 0.5%;
+}
+#line1 {
+    grid-area: line1;
+    display: flex;
+}
+
+#projectsCont {
+    grid-area: PCont;
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "port1 port2"
+    "port3  port4"
+    ;
+}
+.port{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20%;
+}
+.port button {
+    max-width: 60%;
+    max-height: 30%;
+}
+.port h2 {
+    font-size:2rem;
+    font-weight: 200;
+    margin: 0%;
+}
+.port h4 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+#port1 {
+    grid-area: port1;
+}
+#port2 {
+    grid-area: port2;
+}
+#port3 {
+    grid-area: port3;
+}
+#port4 {
+    grid-area: port4;
+}
+#line2 {
+    grid-area: line2;
+    display: flex;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.3rem;
+    font-weight: 200;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". namefoot ."
+    "schoolfoot mailfoot yearfoot"
+    ;
+    text-align: center;
+}
+#SchoolFoot {
+    grid-area: schoolfoot ;
+}
+#YearFoot {
+    grid-area: yearfoot;
+}
+#NameFoot {
+    grid-area: namefoot;
+    font-family: 'Marck Script', cursive;
+    font-weight: 200;
+    font-size: 4rem;
+    margin:0%
+
+}
+#MailFoot {
+    grid-area: mailfoot;
 }
