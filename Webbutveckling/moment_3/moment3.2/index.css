@@ -19,10 +19,11 @@ body {
     grid-template-areas:
     "logo nav";
 }
+/*grid for about*/
 #gridom {
     background-image: url("banner.webp");
-    
 }
+/*logo for about*/
 #gridom #logo {
     width: 150px;
 }
@@ -36,7 +37,6 @@ nav {
     position: relative;
     grid-area: nav;
 }
-
 /*Nav bar- sourse  https://www.w3schools.com/css/css_navbar_horizontal.asp*/
 ul {
     list-style-type: none;
@@ -96,6 +96,7 @@ article {
     text-align: center;
     margin-bottom: 15%;
 }
+/*Carrot Article*/
 #morotter {
     grid-area: carrots;
     display: grid;
@@ -134,6 +135,7 @@ article {
     margin-top: 2em;
     font-size: 1.3em;
 }
+/*Rats Article*/
 #tamrattor {
     grid-area: rats;
     display: grid;
@@ -172,6 +174,7 @@ article {
     margin-top: 1.4em;
     font-size: 1.3em;
 }
+/*Christmas Article*/
 #jul {
     grid-area: christmas;
     display: grid;
@@ -209,7 +212,7 @@ article {
     margin-top: 1.5em;
     font-size: 1.3em;
 }
-/*Footer*/
+/*Footer, is a grid*/
 footer {
     grid-area: footer;
     margin: 0%;
@@ -239,8 +242,8 @@ footer h2 {
     margin: 0%;
     margin-bottom: 2%;
 }
-
- /*Källa David Frendin*/
+/*hamburger meny*/
+ /*Sourse David Frendin*/
 .hamburger ul {
     display: none;
     position: absolute;
@@ -252,19 +255,23 @@ footer h2 {
 .hamburger ul li {
     display: block;
 }
-
 .hamburger ul li a {
     display: block;
     padding: .5em;
     background: darkgray;
     color: black;
-    font-style: none;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    border:3px solid #393939;
+
 }
 .hamburger:hover ul {
     display: block;
 }
 
 /*Coursers*/
+/*Main grid*/
 .gridartCo {
     display: grid;
     grid-template-rows: auto;
@@ -284,7 +291,6 @@ thead th {
     padding-bottom: 1em;
     color: white;
 }
-
 tbody td {
     text-align: center;
     font-size: 20px;
@@ -322,7 +328,7 @@ tfoot td {
     height: 20em;
 }
 
-/*pictures1*/
+/*pictures*/
 
 #gridartpi {
     display: grid;
@@ -333,6 +339,25 @@ tfoot td {
     "picnav pic1 pic2"
     "footer footer footer";
 }
+.picture1 {
+    grid-area: pic1;
+    object-fit: scale-down;
+    max-width: 30vw;
+    min-width: 6em;
+    margin:auto;
+    margin-top: 200px;
+    margin-top: 200px;
+    margin-bottom: 100px
+}
+.picture2 {
+    grid-area: pic2;
+    object-fit: scale-down;
+    max-width: 30vw;
+    min-width: 6em;
+    margin:auto;
+    margin-top: 200px;
+}
+/*Navigation for underpages*/
 .picnav {
     grid-area: picnav;
     display: grid;
@@ -378,24 +403,6 @@ tfoot td {
     grid-area: 3;
 
 }
-.picture1 {
-    grid-area: pic1;
-    object-fit: scale-down;
-    max-width: 30vw;
-    min-width: 6em;
-    margin:auto;
-    margin-top: 200px;
-    margin-top: 200px;
-    margin-bottom: 100px
-}
-.picture2 {
-    grid-area: pic2;
-    object-fit: scale-down;
-    max-width: 30vw;
-    min-width: 6em;
-    margin:auto;
-    margin-top: 200px;
-}
 
 /*contct*/
 
@@ -415,13 +422,14 @@ tfoot td {
     font-size: 30px;
     text-align: center;
 }
+/*Contact form sourse w3school.com*/
 #contactform {
     grid-area: conform;
     display: grid;
     grid-template-areas: 
     "field";
 }
-fieldset {
+fieldset { 
     grid-area: field;
     background-color:lightgray ;
     border: 5px solid  #9e1e1e;
@@ -515,7 +523,7 @@ textarea {
 }
 
 @media only screen and (min-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
-    .hamburger {
+    .hamburger { /*Removes hamburger hen screen is to big*/
         display: none;
     }
 }
@@ -552,7 +560,6 @@ textarea {
     }
 }
 
-
 @media only screen and (max-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
  
 
@@ -581,7 +588,6 @@ textarea {
     .navlink {
         display: none;
     }
-
 }
 
 @media only screen and (max-width: 400px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
@@ -602,42 +608,41 @@ textarea {
     }
     /*about*/
     #gridartabout {
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    grid-template-areas: 
-    "om "
-    "jag"
-    "pres"    
-    "footer";
-}
-#ommig {
-    padding-left: 0%;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-}
-#pres {
-    padding-top: 0%;
-    margin-top:0%;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 80vw;
-    padding-left: 20px;
-    font-size: 25px;
-    margin-bottom: 80px;
-}
-#jag {
-    grid-area: jag;
-    float: right;
-    background-image: url ("jag.webp");
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20%;
-    padding-top: 0%;
-    margin-top: 20%;
-    padding-bottom: 0%;
-    padding-left: 5px;
-}
-   
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "om "
+        "jag"
+        "pres"    
+        "footer";
+    }
+    #ommig {
+        padding-left: 0%;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+    }
+    #pres {
+        padding-top: 0%;
+        margin-top:0%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80vw;
+        padding-left: 20px;
+        font-size: 25px;
+        margin-bottom: 80px;
+    }
+        #jag {
+        grid-area: jag;
+        float: right;
+        background-image: url ("jag.webp");
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20%;
+        padding-top: 0%;
+        margin-top: 20%;
+        padding-bottom: 0%;
+        padding-left: 5px;
+    }  
 }
