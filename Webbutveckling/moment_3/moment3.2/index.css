@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     background-color: lightgray;
     margin:0%;
     padding:0%;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 700;
+    line-height: 2em;
 }
 /*Header grid*/
 .grid {
@@ -67,7 +71,7 @@ li {
  }
   /*The articles*/
   /*Main article grid*/
-  .gridart {
+.gridart {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto;
@@ -101,6 +105,7 @@ article {
     grid-area: arth;
     padding: 0%;
     margin: 0%;
+    font-size: 2em;
 }
 #morotter img {
     grid-area: img;
@@ -113,12 +118,14 @@ article {
     padding: 0%;
     margin: 0%;
     margin-top: 2em;
+    font-size: 1.2em;
 }
 #morotter .text {
     grid-area: atext;
     padding: 0%;
     margin: 0%;
     margin-top: 2em;
+    font-size: 1.3em;
 }
 #tamrattor {
     grid-area: rats;
@@ -136,23 +143,27 @@ article {
     grid-area: arth;
     padding: 0%;
     margin: 0%;
+    font-size: 2em;
 }
 #tamrattor img {
     grid-area: img;
     padding: 0%;
     margin: 0%;
-    margin-top: 2.8em;
+    margin-top: 4em;
 }
 #tamrattor .date {
     grid-area: date;
     padding: 0%;
     margin: 0%;
-    margin-top: 0.7em;
+    margin-top: 2em;
+    font-size: 1.2em;
 }
 #tamrattor .text {
     grid-area: atext;
     padding: 0%;
     margin: 0%;
+    margin-top: 1.4em;
+    font-size: 1.3em;
 }
 #jul {
     grid-area: christmas;
@@ -167,6 +178,7 @@ article {
 }
 #jul .arthead{
     grid-area: arth;
+    font-size: 2em;
     padding: 0%;
     margin: 0%;
 }
@@ -181,12 +193,14 @@ article {
     padding: 0%;
     margin: 0%;
     margin-top: 2em;
+    font-size: 1.2em;
 }
 #jul .text {
     grid-area: atext;
     padding: 0%;
     margin: 0%;
     margin-top: 1.5em;
+    font-size: 1.3em;
 }
 /*Footer*/
 footer {
@@ -219,11 +233,7 @@ footer h2 {
     margin-bottom: 2%;
 }
 
-
-.hamburger ul {
-    position: relative;
-}
-
+ /*Källa David Frendin*/
 .hamburger ul {
     display: none;
     position: absolute;
@@ -232,7 +242,6 @@ footer h2 {
     max-width: 100%;
     width: 500px;
 }
-
 .hamburger ul li {
     display: block;
 }
@@ -240,11 +249,262 @@ footer h2 {
 .hamburger ul li a {
     display: block;
     padding: .5em;
-    background: #000000;
+    background: darkgray;
+    color: black;
+    font-style: none;
 }
-
 .hamburger:hover ul {
     display: block;
+}
+
+/*Coursers*/
+.gridartCo {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    min-height: 100vh;
+    grid-template-areas: 
+    "tab1 tab2"
+    "footer footer";
+}
+table {
+    background-color: #bababa;
+}
+thead th {
+    font-size: 20px;
+    background-color:#393939;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+}
+
+tbody td {
+    text-align: center;
+    font-size: 20px;
+    background-color:#494949;
+    padding-top: 1em;
+    padding-bottom: 0.6em;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+tfoot td {
+    font-size: 20px;
+    background-color:#393939;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    text-align: center;
+}   
+#table1 {
+    grid-area: tab1;
+    margin-top: 15em;
+    margin-bottom: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vw;
+    height: 20em;
+}
+#table2 {
+    grid-area: tab2;
+    margin-top: 15em;
+    margin-bottom: 10em;
+    margin-right: auto;
+    margin-left:auto;
+    width: 35vw;
+    height: 20em;
+}
+
+/*pictures1*/
+
+#gridartpi {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    min-height: 100vh;
+    grid-template-areas: 
+    "picnav pic1 pic2"
+    "footer footer footer";
+}
+.picnav {
+    grid-area: picnav;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "ulpic";
+    margin-bottom: 100px;
+}
+#ulpic {
+    grid-area: picnav;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3";
+}
+.picnavbutt {
+    
+    background-color: #9e1e1e;
+    color: lightgray;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    border: 2px  solid black;
+    max-width:60px;
+    min-width: 60px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/    
+}
+#pic1 {
+    grid-area:1 ;
+    margin: 0%;
+}
+#pic2 {
+    margin: 0%;
+    grid-area:2 ;
+}
+#pic3 {
+    margin: 0%;
+    grid-area: 3;
+
+}
+.picture1 {
+    grid-area: pic1;
+    object-fit: scale-down;
+    max-width: 30vw;
+    min-width: 6em;
+    margin:auto;
+    margin-top: 200px;
+    margin-top: 200px;
+    margin-bottom: 100px
+}
+.picture2 {
+    grid-area: pic2;
+    object-fit: scale-down;
+    max-width: 30vw;
+    min-width: 6em;
+    margin:auto;
+    margin-top: 200px;
+}
+
+/*contct*/
+
+#gridartcon {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    min-height: 100vh;
+    grid-template-areas: 
+    "conme"
+    "conform"
+    "footer";
+}
+#contactme {
+    grid-area: conme;
+    margin-top: 200px;
+    font-size: 30px;
+    text-align: center;
+}
+#contactform {
+    grid-area: conform;
+    display: grid;
+    grid-template-areas: 
+    "field";
+}
+fieldset {
+    grid-area: field;
+    background-color:lightgray ;
+    border: 5px solid  #9e1e1e;
+    margin:0%;
+    padding:0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+#submit {
+    margin:15px;
+    background-color: #9e1e1e;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px  solid black;
+    float:inline-start;
+    min-width: 60px;
+    font-weight: bolder;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/  
+}
+#reset {
+    margin:15px;
+    background-color: #393939;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px  solid black;
+    float:right;
+    min-width: 60px;
+    font-weight: bolder;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/  
+}
+label {
+    margin-left: 1em;
+}
+textarea {
+    margin-top: 1em;
+}
+
+/*About*/
+#gridartabout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto;
+    grid-template-columns: 40% 50% 10%;
+    grid-template-areas: 
+    "jag om ."
+    "jag pres ."    
+    " footer footer footer";
+}
+#ommig {
+    display: flex;
+    float: left;
+    grid-area: om;
+    margin-top: 200px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+#pres {
+    float: left;
+    grid-area: pres;
+    text-align: center;
+    max-width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    font-size: 25px;
+    margin-bottom: 150px;
+}
+#jag {
+    grid-area: jag;
+    float: right;
+    background-image: url ("jag.webp");
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+    margin-top: 250px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 10px;
 }
 
 @media only screen and (min-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
@@ -252,6 +512,39 @@ footer h2 {
         display: none;
     }
 }
+
+@media only screen and (max-width: 950px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    .gridartCo {
+        grid-template-areas: 
+        "tab1"
+        "tab2"
+        "footer";
+    }   
+    #table2 {
+        margin-top: 0%;
+    }
+}
+@media only screen and (max-width: 800px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+    /*pictures*/
+    #gridartpi {
+        grid-template-areas: 
+        "picnav pic1 "
+        "picnav pic2"
+        "footer footer";
+    }
+    .picture1 {
+        width: 60vw;
+        margin-bottom: 3em;
+        padding-bottom: 0%;
+    }
+    .picture2 {
+        width: 80vw;
+        margin-top: 0%;
+        padding-top: 0%;
+        margin-bottom: 5em;
+    }
+}
+
 
 @media only screen and (max-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
  
@@ -282,4 +575,62 @@ footer h2 {
         display: none;
     }
 
+}
+
+@media only screen and (max-width: 400px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+ 
+    fieldset {
+        grid-area: field;
+        display: grid;  
+        max-height: 100em;
+    }
+    label {
+        padding-bottom: 1em;
+        padding-top: 0%;
+        text-align: center;
+    }
+    #namelabel {
+        margin-top: 2em;
+        padding-bottom: 0%;
+    }
+    /*about*/
+    #gridartabout {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "om "
+    "jag"
+    "pres"    
+    "footer";
+}
+#ommig {
+    padding-left: 0%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+#pres {
+    padding-top: 0%;
+    margin-top:0%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80vw;
+    padding-left: 20px;
+    font-size: 25px;
+    margin-bottom: 80px;
+}
+#jag {
+    grid-area: jag;
+    float: right;
+    background-image: url ("jag.webp");
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20%;
+    padding-top: 0%;
+    margin-top: 20%;
+    padding-bottom: 0%;
+    padding-left: 5px;
+}
+   
 }

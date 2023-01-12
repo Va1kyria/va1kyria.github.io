@@ -1,133 +1,132 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="Skoluppgift" content="uppg 3.2">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--https://www.w3schools.com/howto/howto_js_mobile_navbar.asp--> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <meta name="Skoluppgift" content="uppg 3.2">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--https://www.w3schools.com/howto/howto_js_mobile_navbar.asp--> 
 
-    <title>Startsida</title>
-</head>
-<body>
-    <header>
-        <div class="grid">
+        <title>Startsida</title>
+    </head>
+    <body>
+        <header>
+            <div class="grid">
+                
+                <img id="logo" src="logo.webp" alt="logo gaeas">
+
+                <nav>
+                    <ul class="navul">
+                        <li class="hamburger">
+                            <img src="icons8-hamburger-menu-48.png" alt="Navigation link" style="max-height: 1em" />
+                            <ul class="inner">
+                                <li>
+                                    <a href="index.html">Startsida</a>
+                                </li>
+                                <li>    
+                                    <a href="courses.html">Kurser</a>
+                                </li>
+                                <li>    
+                                    <a href="pictures.html">Bilder</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Kontakt</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">Om</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="index.html" class="navlink">Startsida</a>
+                        </li>
+                        <li>    
+                            <a href="courses.html" class="navlink">Kurser</a>
+                        </li>
+                        <li>    
+                            <a href="pictures.html" class="navlink">Bilder</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="navlink">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="navlink">Om</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <container class="gridart">
             
-            <img id="logo" src="logo.webp" alt="logo gaeas">
-
-            <nav>
-                <ul class="navul">
-                    <li class="hamburger">
-                        <img src="icons8-hamburger-menu-48.png" alt="Navigation link" style="max-height: 1em" />
-                        <ul class="inner">
-                            <li>
-                                <a href="index.html">Startsida</a>
-                            </li>
-                            <li>    
-                                <a href="courses.html">Kurser</a>
-                            </li>
-                            <li>    
-                                <a href="pictures.html">Bilder</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Kontakt</a>
-                            </li>
-                            <li>
-                                <a href="about.html">Om</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="index.html" class="navlink">Startsida</a>
-                    </li>
-                    <li>    
-                        <a href="courses.html" class="navlink">Kurser</a>
-                    </li>
-                    <li>    
-                        <a href="pictures.html" class="navlink">Bilder</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="navlink">Kontakt</a>
-                    </li>
-                    <li>
-                        <a href="about.html" class="navlink">Om</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-      
-    <container class="gridart">
-        
-        <article id="morotter">
-            <h2 class="arthead">
-                Morötter äts
-                <br/>
-                allt mer
-            </h2>
-            <div class="img" id="imgcar"> <!--https://www.computerhope.com/issues/ch000059.htm-->
-                <a href="carrots.html" target="_blank">
-                <img id="carrots" src="morötter.jpg" alt="Morötter" width="200" height="120"/>
-                </a>
-            </div>
-            <p class="date">2022-11-01</p>
-            <p class="text">Morötter har fått en allt större plats på svenskarnas tallrikar.
-            Detta har enligt tidningens expert
-            "påhittat namn" kommit sig av att hälsobloggare har lyft 
-            f   ram moroten i allt större utsträckning
-            </p>
-        </article> 
-   
-        <article id="tamrattor">   
-            <h2 class="arthead">
-                Tamråttor som 
-                <br />
-                husdjur
-            </h2>
-            <div class="img" id="imgrats"> <!--https://www.computerhope.com/issues/ch000059.htm-->
-                <a href="rats.html" target="_blank">
-                <img id="rats" src="Råttor.JPG" alt="Råttor" width="200" height="120"/>
-                </a>
-            </div>
-            <p class="date">2022-11-01</p>
-            <p class="text">Tamråttan har hållts som husdjur under många år och har med åren varierat i populäritet. <br/>
-            Nu är den på uppgång i populäritet. Men hur kommer det sig? 
-            Enligt diverse uppfödare som vi har intevjuvat verkar ökningen vara sammankopplad till en mer seriös <br />
-            privat avel och aktiva föreningar för arten som har startats under de senaste åren</p>
-        </article>
-        
-        <article id="jul">
-            <h2 class="arthead">Snart är julen här</h2>
-            <div class="img" id="imgchr"> <!--https://www.computerhope.com/issues/ch000059.htm-->
-                <a href="christmas.html" target="_blank">
-                <img id="christmas" src="jul2.avif" alt="julgran" width="200" height="120"/>
-                </a>
-            </div>
-            <p class="date">2022-11-01</p>
-            <p class="text">Många är vi som längtar efter att julen ska komma, och många av oss har redan nu i oktober börjat julpynta och shoppa. <br/>
-            Samtidigt märker vi som börjar tidigt av att många blir irriterade över att butiker och privatpersoner startar julen tidigt. <br /> 
-            Efter att ha pratat med flera motståndare till att starta julen tidigt har jag kommit fram till att det finns, i alla fall hos en del <br />
-            en stark känsla av tradition som vi tidiga julfirare bryter emot.
-            Så vem har rätt? Den tidiga julfiraren som vill ha julmys under hela den mörka perioden av året. <br />
-            Eller den traditionstrogna som vill hålla julen speciell och magisk under några få dagar?
-            </p>
-        </article>    
+            <article id="morotter">
+                <h2 class="arthead">
+                    Morötter äts
+                    <br/>
+                    allt mer
+                </h2>
+                <div class="img" id="imgcar"> <!--https://www.computerhope.com/issues/ch000059.htm-->
+                    <a href="carrots.html" target="_blank">
+                    <img id="carrots" src="morötter.jpg" alt="Morötter" width="200" height="120"/>
+                    </a>
+                </div>
+                <p class="date">2022-11-01</p>
+                <p class="text">Morötter har fått en allt större plats på svenskarnas tallrikar.
+                Detta har enligt tidningens expert
+                "påhittat namn" kommit sig av att hälsobloggare har lyft 
+                f   ram moroten i allt större utsträckning
+                </p>
+            </article> 
     
-        <footer> 
-    
-            <h2>
-                DT057G Datateknik GR (A), Webbutveckling I, 7,5 hp
-            </h2>
-            <h4 id="date">
-                2022-11-01
-            </h4>
-            <h4 id="name">
-                Mikaela Frendin
-            </h4>
-        </footer>
-    </container> 
-</body>
+            <article id="tamrattor">   
+                <h2 class="arthead">
+                    Tamråttor som 
+                    <br />
+                    husdjur
+                </h2>
+                <div class="img" id="imgrats"> <!--https://www.computerhope.com/issues/ch000059.htm-->
+                    <a href="rats.html" target="_blank">
+                    <img id="rats" src="Råttor.JPG" alt="Råttor" width="200" height="120"/>
+                    </a>
+                </div>
+                <p class="date">2022-11-01</p>
+                <p class="text">Tamråttan har hållts som husdjur under många år och har med åren varierat i populäritet. <br/>
+                Nu är den på uppgång i populäritet. Men hur kommer det sig? 
+                Enligt diverse uppfödare som vi har intevjuvat verkar ökningen vara sammankopplad till en mer seriös <br />
+                privat avel och aktiva föreningar för arten som har startats under de senaste åren</p>
+            </article>
+            
+            <article id="jul">
+                <h2 class="arthead">Snart är julen här</h2>
+                <div class="img" id="imgchr"> <!--https://www.computerhope.com/issues/ch000059.htm-->
+                    <a href="christmas.html" target="_blank">
+                    <img id="christmas" src="jul2.avif" alt="julgran" width="200" height="120"/>
+                    </a>
+                </div>
+                <p class="date">2022-11-01</p>
+                <p class="text">Många är vi som längtar efter att julen ska komma, och många av oss har redan nu i oktober börjat julpynta och shoppa. <br/>
+                Samtidigt märker vi som börjar tidigt av att många blir irriterade över att butiker och privatpersoner startar julen tidigt. <br /> 
+                Efter att ha pratat med flera motståndare till att starta julen tidigt har jag kommit fram till att det finns, i alla fall hos en del <br />
+                en stark känsla av tradition som vi tidiga julfirare bryter emot.
+                Så vem har rätt? Den tidiga julfiraren som vill ha julmys under hela den mörka perioden av året. <br />
+                Eller den traditionstrogna som vill hålla julen speciell och magisk under några få dagar?
+                </p>
+            </article>    
+        
+            <footer>  
+                <h2>
+                    DT057G Datateknik GR (A), Webbutveckling I, 7,5 hp
+                </h2>
+                <h4 id="date">
+                    2022-11-01
+                </h4>
+                <h4 id="name">
+                    Mikaela Frendin
+                </h4>
+            </footer>
+        </container> 
+    </body>
 </html>
 
