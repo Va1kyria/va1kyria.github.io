@@ -19,6 +19,13 @@ body {
     grid-template-areas:
     "logo nav";
 }
+#gridom {
+    background-image: url("banner.webp");
+    
+}
+#gridom #logo {
+    width: 150px;
+}
 #logo {
     margin-left: 30%;
     margin-top: 5%;
