@@ -15,29 +15,18 @@
     font-family: inter;
     src: url(Inter-Regular.ttf);
   }
-body {
-    max-width: 1600px;
-}
+
 #container {
-    max-width:1600px;
+    max-width: 1600px;
     display: grid;  /* https://www.w3schools.com/css/css_grid.asp*/
-    grid-template-columns: auto;
-    grid-template-rows:    10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows:    auto;
     grid-template-areas: 
-    "logo     .       .       .       .       kurser  kurser  kurser  kurser  kurser "
-    "  ar       ar      ar      ar      .     kurser  kurser  kurser  kurser  kurser"
-    " ar       ar      ar      ar      .       kurser  kurser  kurser  kurser  kurser"
-    " ar       ar      ar      ar       .       kurser  kurser  kurser  kurser kurser"
-    " .       .       .       .       .       kurser  kurser  kurser  kurser   kurser"
-    " .       .       .       .      .       kurser  kurser  kurser  kurser  kurser"
-    " pic1     .      .      pic2    .        .   pic3          .       .       pic4"
-    " pic1     .      .      pic2    .        .   pic3          .       .       pic4"
-    "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2   .       .        ."
-    "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2   .       .        ."
-    "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2   .       .        ."
-    "kurser2 kurser2 kurser2 kurser2 kurser2 kurser2 kurser2    .       .        ."
-    ".      .      .      .      .      .      .      .      .      .      "
-    "footer  footer  footer  footer footer  footer  footer  footer  footer  footer";
+    "logo    logo       kurser   kurser"
+    "  ar       ar     kurser      kurser "
+    " ci       ci      ci      ci   "
+    " kurser2      kurser2      kurser2     . " 
+    " footer      footer    footer   footer";
 }
 #logo {
     grid-area: logo;
@@ -46,73 +35,83 @@ body {
 }
 #kurser {
     grid-area: kurser;
-    vertical-align: middle;
-    height:730px;
+    height:auto;
     background-color: #2F80ED;
     color: white;
-    border-radius: 0px 0px 0px 240px; /*https://www.w3schools.com/css/css3_borders.asp*/
-    padding-left:0%;
+    border-radius: 0px 0px 0px 100px; /*https://www.w3schools.com/css/css3_borders.asp*/
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    padding-bottom: 3em;
 }
 
 #kursertop {
     padding-top: 10%;
     padding-bottom: 3%;
     font-family: open_sans;
-    font-weight: 600;
+    font-weight: 600;  
 }
 #kurser p {
-
-    padding-left:20%;
-    font-size:25px;
+    font-size:12px;
     font-family: open_sans;
-    font-weight: 600;
-    line-height: 35px;
+    font-weight: 400;
+    padding-left: 100px; 
+    ;
 }
 article {
     grid-area: ar;
-    padding-top:10%;
+    padding-top:0%;
     padding-left:10%;
     margin: 0%;
     padding-right: 0%;
-    max-width: 600px;
-
+    max-width: 40vw;
 }
 h1 {
-    font-size: 70px;
+    font-size: 36px;
     font-family: sf_pro;
-    font-weight: 600;
+    font-weight: 100;
     padding:0%;
     margin:0%;
-    padding-top:3%;
 }
 article p {
-    font-size: 20px;
+    
+    font-size: 12px;
     font-family: sf_pro_txt;
-    font-weight: 400;
+    font-weight: 600;
     padding-top: 4%;
     line-height: 25px;
     padding: 0%;
-
+    margin-right:2em;
 }   
-img {
-    width: 240px;
-    height: 240px;
-    border-radius: 50px;
+#containerimg {
+    grid-area: ci;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:    auto;
+    grid-template-areas: 
+    "p1 p2 p3 p4";
+    max-width: 1600px;
+    margin-bottom: 4em;
+    margin-top: 4em;
+}
+#containerimg img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #pic1 {
-    grid-area: pic1;
-    padding-left: 20%;
+    grid-area: p1;
 }
 #pic2 {
-    grid-area: pic2;
+    grid-area: p2;
 }
 #pic3 {
-    grid-area: pic3;
+    grid-area: p3;
 }
 #pic4 {
-    grid-area: pic4;
-    margin:0%;
-    
+    grid-area: p4;    
 }
 #kurser2 {
     grid-area: kurser2;
@@ -120,15 +119,17 @@ img {
     border-radius: 0px 50px 50px 0px ;
     padding: 0%;
     margin: 0%;
-    max-width: 88%;
+    max-width: 60vw;
+    margin-bottom: 80px;
+    padding-bottom: 30px;
 }
 #kurser2 h2 {
     
-    font-size:40px;
+    font-size:30px;
     font-family: open_sans;
     font-weight: 600;
-    line-height: 55px;
-    padding-left:15%;
+    line-height: 1;
+    margin-left: 50px;
     letter-spacing: -0.04em;
     color: #2F80ED;
 }
@@ -137,15 +138,15 @@ img {
     font-size:20px;
     font-family: open_sans;
     font-weight: 400;
-    line-height: 28px;
-    padding-left: 15%;
+    line-height: 1em;
+    margin-left: 50px;
 }
 footer {
     grid-area: footer;
     background-color: #2F80ED;
     line-height: 25px;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 100;
+    font-size: 16px;
     color: white;
     font-family: inter;
     width:100%;
@@ -156,271 +157,81 @@ footer p {
 }
 
 @media (max-width: 1024px){
-
     #container {
         max-width: 1024px;
-        display: grid;  /* https://www.w3schools.com/css/css_grid.asp*/
-        grid-template-columns: auto;
-        grid-template-rows:    10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
         grid-template-areas: 
-        "logo     .       .       .         .       kurser  kurser  kurser  kurser  kurser "
-        "  ar       ar      ar      ar      .       kurser  kurser  kurser  kurser  kurser"
-        " ar       ar      ar      ar       .       kurser  kurser  kurser  kurser  kurser"
-        " pic1     pic1    pic1    pic1     .       pic3     pic3     pic3  pic3    pic3"
-        "  pic1     pic1    pic1    pic1    .       pic3     pic3     pic3  pic3    pic3"
-        " pic2     pic2   pic2    pic2      .       pic4    pic4    pic4   pic4    pic4"
-        "  pic2    pic2     pic2   pic2     .       pic4    pic4    pic4   pic4    pic4"       
-        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
-        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
-        "kurser2 kurser2 kurser2 kurser2  kurser2 kurser2 kurser2  kurser2  .        ."
-        "kurser2 kurser2 kurser2 kurser2 kurser2 kurser2 kurser2   kurser2  .        ."
-        "   .      .        .      .      .        .      .        .        .        .   "
-        "footer  footer  footer  footer footer  footer  footer  footer  footer  footer";
+        "logo    logo       kurser   kurser"
+        "  ar       ar     kurser      kurser "
+        " ci       ci      ci      ci   "
+        " ci       ci      ci      ci   "
+        " kurser2      kurser2      kurser2     . " 
+        " footer      footer    footer   footer";
     }
-    #logo {
-        grid-area: logo;
-        max-width: 100px;
-        max-height: 90px;
+    #containerimg {
+        grid-area: ci;
+        grid-template-areas: 
+        "p1 p2"
+        "p3 p4";
+        max-width: 100vw;
+        margin: 0%;
+        margin-top: 1em;
+        margin-bottom: 2em;
         padding: 0%;
+    }
+    #containerimg img {
+        width: 40vw;
+        padding: 0%;
+        margin: 0%;
+        height: 80%;  
+        border-radius: 30px;
+        margin-left: auto;
+        margin-right: auto;
     }
     #kurser {
-        grid-area: kurser;
-        vertical-align: middle;
-        height:100%;
-        background-color: #2F80ED;
-        color: white;
-        border-radius: 0px 0px 0px 170px; /*https://www.w3schools.com/css/css3_borders.asp*/
-        padding-left:0%;
-    }
-    
-    #kursertop {
-        padding-top: 10%;
-        padding-bottom: 3%;
-        font-family: open_sans;
-        font-weight: 600;
-    }
-    #kurser p {
-    
-        padding-left:20%;
-        font-size:20px;
-        font-family: open_sans;
-        font-weight: 600;
-        line-height: 20px;
-    }
-    article {
-        position: absolute;
-        grid-area: ar;
-        padding-top:15%;
-        padding-left:6%;
-        margin: 0%;
-        padding-right: 0%;
-        max-width: 400px;
-
-    
-    }
-    h1 {
-        font-size: 40px;
-        font-family: sf_pro;
-        font-weight: 600;
-        padding:0%;
-        margin:0%;
-        padding-top:0%;
-    }
-    article p {
-        font-size: 17px;
-        font-family: sf_pro_txt;
-        font-weight: 700;
-        padding-top: 4%;
-        line-height: 25px;
-        padding: 0%;
-        padding-right: 5%;
-    
-    }   
-    img {
-        width: 400px;
-        height: 250px;
-        border-radius: 30px ;
-    }
-    #pic1 {
-        grid-area: pic1;
-        padding:0%;
-        margin-left: 10%;
-        margin-top: 10%;
-    }
-    #pic2 {
-        padding: 0%;
-        grid-area: pic2;
-        margin-left: 10%;
-    }
-    #pic3 {
-        grid-area: pic3;
-        margin-top: 10%;
-        margin-left: 15%;
-
-    }
-    #pic4 {
-        grid-area: pic4; 
-        margin-left: 15%;       
+        width: 100%;
     }
     #kurser2 {
-        grid-area: kurser2;
-        background-color: #E0ECFD;
-        border-radius: 0px 50px 50px 0px ;
-        padding: 0%;
-        margin: 0%;
-        max-width: 100%;
+        max-width: 80vw;
     }
-    #kurser2 h2 {
-        
-        font-size:40px;
-        font-family: open_sans;
-        font-weight: 600;
-        line-height: 55px;
-        padding-left:15%;
-        letter-spacing: -0.04em;
-        color: #2F80ED;
-    }
-    #kurser2 p {
-        
-        font-size:20px;
-        font-family: open_sans;
-        font-weight: 100;
-        line-height: 28px;
-        padding-left: 15%;
-    }
-}    
-
+}
 @media (max-width: 600px){
-
     #container {
         max-width: 600px;
-        display: grid;  /* https://www.w3schools.com/css/css_grid.asp*/
-        grid-template-columns: auto;
-        grid-template-rows:    auto;
+        grid-template-columns: 100%;
         grid-template-areas: 
-        "logo" 
-        "ar"
-        "ar"
-        "ar"
-        "kurser2"
-        "kurser2"
-        "kurser2"
-        "kurser2"
-        "pic1"
-        "pic1"
-        "pic2"
-        "pic2"
-        "pic3"
-        "pic3"
-        "pic4"
-        "pic4"
-        "footer";
-
-
+        "logo"
+        "  ar"
+        " kurser2 " 
+        " ci  "
+        " footer ";
     }
     #kurser {
         display: none;
-        grid-area: kurser;
-        vertical-align: middle;
-        height:730px;
-        background-color: #2F80ED;
-        color: white;
-        border-radius: 0px 0px 0px 240px; /*https://www.w3schools.com/css/css3_borders.asp*/
-        padding-left:0%;
-    }
-    #logo {
-        grid-area: logo;
-        max-width: 120px;
-        max-height: 110px;
-        padding: 0%;
     }
     article {
-        position: absolute;
-        grid-area: ar;
-        padding-top:30%;
-        padding-left:15%;
+        max-width: 90vw;
+        margin-top: 15%;
+        margin-bottom: 4%;
+    }
+    #containerimg {
+        grid-area: ci;
+        grid-template-areas: 
+        "p1"
+        "p2"
+        "p3"
+        "p4";
+        max-width: 600px;
+    }
+    #containerimg img {
+        width: 100vw;
+        border-radius: 0px;
         margin: 0%;
-        padding-right: 0%;
-        padding-bottom: 0%;
-        max-width: 400px;
-    }
-    h1 {
-        font-size: 40px;
-        font-family: sf_pro;
-        font-weight: 600;
-        padding:0%;
-        margin:0%;
-        padding-top:0%;
-    }
-    article p {
-        font-size: 17px;
-        font-family: sf_pro_txt;
-        font-weight: 700;
-        padding-top: 4%;
-        line-height: 25px;
         padding: 0%;
-        padding-right: 5%;
-    
+    }
+    #kurser {
+        width: 100%;
     }
     #kurser2 {
-        position: absolute;
-        grid-area: kurser2;
-        background-color: #E0ECFD;
-        border-radius: 0px 50px 50px 0px ; 
-        margin: 0%;
-        max-width: 100%;
-        padding-right: 20%;
-        margin-top: 80%;
+        max-width: 80vw;
     }
-    #kurser2 h2 {
-        
-        font-size:26px;
-        font-family: open_sans;
-        font-weight: 600;
-        line-height: 40px;
-        padding-left:15%;
-        letter-spacing: -0.04em;
-        color: #2F80ED;
-    }
-    #kurser2 p {
-        
-        font-size:20px;
-        font-family: open_sans;
-        font-weight: 100;
-        line-height: 10px;
-        padding-left: 15%;
-    }   
-    img {
-        width: 100vw;
-        height: auto;
-        position: relative;
-    }
-    #pic1 {
-        grid-area: pic1;
-        padding:0%;
-        margin: 0%;
-        padding-top: 140%;
-    }
-    #pic2 {
-        padding: 0%;
-        margin: 0%;
-        grid-area: pic2;
-        margin-top: 3%;
-    }
-    #pic3 {
-        grid-area: pic3;
-        margin: 0%;
-        padding: 0%;
-        margin-top: 3%;
-
-    }
-    #pic4 {
-        grid-area: pic4; 
-        margin: 0%;    
-        padding: 0%;
-        margin-top: 3%;
-        margin-bottom: 10%;   
-    }
-    
-}    
-
+}

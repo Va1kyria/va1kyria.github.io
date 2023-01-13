@@ -1,0 +1,4 @@
+Adress: minafiler.miun.se
+Port: 22 (SFTP)
+Användarnamn: Samma som till studentportalen, ex mada0912
+Lösenord: Samma som till studentportalen
