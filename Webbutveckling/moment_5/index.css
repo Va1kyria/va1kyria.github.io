@@ -11,128 +11,27 @@ body {
     font-weight: 100;
     line-height: 3em;
 }
-/*Grid main*/
-#ContFp {
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    ". he ."
-    ". he ."
-    ". he ."
-    ". button ."
-    ". button ."
-    ". button ."
-    ". . .";
-    background-color: #424141;
-    color: white;
-    max-width: 1024px;
-    min-height: 100vh;
-  
-}
-/*Grid headers*/
-#HeaderFp {
-    margin: 0%;
-    padding: 0%;
-    padding-top: 15%;
+
+/*Buttons (links)*/
+
+.link a {
     text-align: center;
-    grid-area: he;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% 45% 15% 20%;
-    grid-template-areas: 
-    "."
-    "h1"
-    "h2"
-    "h4"
-}
-#NameFp {
-    grid-area: h1;
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Marck Script', cursive;
-    font-weight: 200;
-    font-size: 6rem;
-}
-#DevFp {
-    grid-area: h2;
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 3rem;
-}
-#ProgFp {
-    grid-area: h4;
-    margin: 0%;
-    padding: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2rem;
-}
-/*Grid Buttons*/
-#ButtonsContainerFp {
-    grid-area: button;
-    display: inline-grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% 20% 20% 20% 30%;
-    grid-template-areas: 
-    " . "
-    " p  "
-    " a "
-    " c "
-    " . ";
-}
-/*Buttons index*/
-Button {
-    text-align: center;
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: #BE0000;
-    border: 2px solid black;
-    margin: 1%;
-    padding:0%;
-    width:25rem;
-    height:5rem;
-    margin-left:auto;
-    margin-right: auto;
-}
-button a {
     text-decoration: none;
     color: white;
     font-size: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #AB0E0E;
+    border: 2px solid black;
+    margin: 1%;
+    padding: 1rem;
+    margin-left:auto;
+    margin-right: auto;
 }
-button:hover{
+.link:hover{
     box-shadow: 0 14px 14px 0 rgba(0,0,0,0.5); 
 }
-#PortfolioButtonFp {
-    grid-area: p;
-}
-#AboutMeButtonFp {
-    grid-area: a;
-}
-#ContactMeButtonFp {
-    grid-area: c;
 
-}
-
-/*Portfolio*/
-#ContainerPo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:    
-    ". PPres PPres ."
-    "line1 line1 line1 line1"
-    "PCont PCont PCont PCont"
-    "line2 line2 line2 line2"
-    "footer footer footer footer";
-    background-color: #424141;
-    color: white;
-    max-width: 1024px;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;  
-}
+/*Header with nav, all pages except front page*/
 #HeaderPo {
     max-width: 1024px;
     margin-left: auto;
@@ -140,6 +39,7 @@ button:hover{
     background-color: #202020;
     width: 100%;
     padding-top: 2%;
+    padding-bottom: 1%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -158,24 +58,202 @@ button:hover{
     border: none;
     margin-top: 8%;
     font-family: 'Marck Script', cursive;
+    width: 31rem;
 }
 #LogoButton a {
     font-size: 3rem;
+    text-decoration: none;
+    font-size: 4.5rem;
+    color: white;
 }
 nav {
-    margin-right: 2%;
+    margin-top: 2rem;
+    margin-right: 1rem;
 }
-nav button {
+nav .link {
     max-width: 17%;
     padding: 0%;
-    margin: 0.3%;
+    margin: 1rem;
     margin-top: 2%;
     margin-right: 2%;
     max-height: 55%;
     float: right;
-   grid-area: nav;
-   min-width: 80px;
+    grid-area: nav;
+    min-width: 80px;
+    margin-left: 2rem;
 }
+/*Hamburger button*/
+#hambbutton {
+    grid-area: hamb;
+    display: none;
+    padding: 0%;
+    margin:0%;   
+    margin-top: 4em;
+    padding-left: 4em;
+    padding-right: 1em;
+}
+#hambbutton ul {
+    position: absolute;
+    right: 0;
+    top: 2.2em;
+    max-width: 100%;
+    width: 200px;
+    display: none;
+    margin-top: 9em;
+}
+#hambbutton ul li {
+    display: block;
+}
+#hambbutton ul li a {
+    display: block;
+    padding: .4em;
+    background: #AB0E0E;
+    color: WHITE;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    border:3px solid BLACK;
+}
+#hambbutton:hover ul {
+    display: block;
+}
+
+/*Grid main for front page*/
+#ContFp {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "he"
+    "button";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+}
+
+/*Grid header front page*/
+#HeaderFp {
+    margin: 0%;
+    padding: 0%;
+    padding-top: 15%;
+    text-align: center;
+    grid-area: he;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 30% 15%;
+    margin-top: 5rem;
+    grid-template-areas: 
+    "h1"
+    "h2"
+    "h4"
+}
+#NameFp {
+    grid-area: h1;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Marck Script', cursive;
+    font-weight: 200;
+    font-size: 6rem;
+
+}
+#DevFp {
+    grid-area: h2;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+#ProgFp {
+    grid-area: h4;
+    margin: 0%;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+}
+
+/*Grid Buttons front page*/
+#ButtonsContainerFp {
+    grid-area: button;
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 20% 2% 20% 2% 20%;
+    grid-template-areas: 
+    ". . ."
+    ". p ."
+    ". . ."
+    ". a ."
+    ". . ."
+    ". c ."
+    ". . .";
+}
+#PortfolioFpLi {
+    grid-area: p;
+    display: block;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: #AB0E0E;
+    color: WHITE;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    border:3px solid BLACK;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+#AboutMeFpLi {
+    grid-area: a;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+    background: #AB0E0E;
+    color: WHITE;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    border:3px solid BLACK;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#ContactMeFpLi {
+    grid-area: c;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+    background: #AB0E0E;
+    color: WHITE;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    border:3px solid BLACK;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/*Portfolio*/
+/*Main container*/
+#ContainerPo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    ". PPres PPres ."
+    "line1 line1 line1 line1"
+    "PCont PCont PCont PCont"
+    "line2 line2 line2 line2"
+    "footer footer footer footer";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
 #PortPres {
     display: flex;
     grid-area: PPres;
@@ -186,9 +264,8 @@ nav button {
     margin-top: 170px;
     margin-bottom: 10%;
 }
-
 .line {
-    background-color: #BE0000;
+    background-color: #AB0E0E;
     max-height: 100%;
     margin: 0%;
     min-height: 100%;
@@ -198,7 +275,7 @@ nav button {
     grid-area: line1;
     display: flex;
 }
-
+/*Grid for portfolios*/
 #projectsCont {
     grid-area: PCont;
     display: grid;
@@ -210,21 +287,17 @@ nav button {
     "port3  port4"
     ;
 }
+/*The portfolios*/
 .port{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-bottom: 20%;
 }
-button:disabled {
-    background-color: grey;
-    color: black;
-    font-size: 2rem;
-}
-.port button {
-    max-width: 60%;
+.port .link {
     max-height: 30%;
 }
+/*Font-sizes*/
 .port h2 {
     font-size:2rem;
     margin: 0%;
@@ -235,6 +308,7 @@ button:disabled {
     margin-top: 2%;
     margin-bottom: 10%;
 }
+/*determen gridposision for the portfolios*/
 #port1 {
     grid-area: port1;
 }
@@ -251,60 +325,64 @@ button:disabled {
     grid-area: line2;
     display: flex;
 }
-
-footer {
-    grid-area: footer;
-    display: grid;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    font-size: 1.7rem;
-    font-weight: 100;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    ". namefoot ."
-    "schoolfoot mailfoot yearfoot"
-    ;
-    text-align: center;
+/*Gives looks to disabled links*/
+#ToPortfolio4 {
+    background-color: lightgrey;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.5rem;   
 }
-#SchoolFoot {
-    grid-area: schoolfoot ;
+#ToPortfolio3 {
+    background-color: lightgrey;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.5rem;
 }
-#YearFoot {
-    grid-area: yearfoot;
+#ToPortfolio2 {
+    display: inline-block;
+    background-color: lightgrey;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem;
 }
-#NameFoot {
-    grid-area: namefoot;
-    font-family: 'Marck Script', cursive;
-    font-weight: 400;
-    font-size: 4rem;
-    margin:0%;
-    margin-bottom: 10%;
-
+#ToPortfolio1 {
+    display: inline-block;
+    margin-top: 2rem;
 }
-#MailFoot {
-    grid-area: mailfoot;
-}
-#ContainerP01 { /*Main container*/
+/*portfolio1*/
+/*Main container for portfolio 1*/
+#ContainerPo2 {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas:
-    "empty empty empty empty"    
-    "HCP2 HCP2 HCP2 HCP2"
-    "PC PC PC PC"
-    "lp2 lp2 lp2 lp2"
-    "footer footer footer footer";
+    grid-template-areas:    
+    "cp01 "
+    "LinePo2"
+    "footer";
     background-color: #424141;
     color: white;
     max-width: 1024px;
     min-height: 100vh;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;  
 }
-.empty {
-    grid-area: empty;
-    height:100px;
+#ContainerP01 { /*Container for main content*/
+    grid-area: cp01;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "HCP2"
+    "PC"
+    "footer";
+    background-color: #424141;
+    color: white;
+    margin-top: 10rem;    
 }
 /*Container for the portfolio headers*/
 #HeadContPort2 {
@@ -320,8 +398,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
-    padding-bottom: 3%;
-    
+    padding-bottom: 3%;    
 } 
 #HeadPort2{  /*Header H1*/
     grid-area: HP2;
@@ -349,8 +426,8 @@ footer {
     ;
     margin-top: 15%;
     margin-bottom: 15%;
-
 }
+/*Project1*/
 #Project1 {
     grid-area: P1;
     display: grid;
@@ -365,7 +442,6 @@ footer {
 }
 #HeaderStudera {
     grid-area: hs1;
-
 }
 img{
     grid-area: img1;
@@ -376,26 +452,47 @@ img{
 #MoreToCome {
     grid-area: more1;
 }
+/*red line*/
 #LinePo2 {
-    grid-area: lp2;
+    grid-area: LinePo2;
+    background-color: #AB0E0E;
+    max-height: 100%;
+    margin: 0%;
+    min-height: 100%;
+    margin-top: 0.5%;
 }
 
-#ContainerAbout {
+/*About*/
+/*Main container about*/
+#Containerab1 {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas:
-    "empty "    
-    "HAbout"
-    "A"
-    "lA"
+    grid-template-areas:    
+    "header"
+    "conabo"
     "footer";
     background-color: #424141;
     color: white;
     max-width: 1024px;
     min-height: 100vh;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;  
+}
+#ContainerAbout {
+    grid-area: conabo;
+    margin-top: 100px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "empty "    
+    "HAbout"
+    "pabo"
+    "lA";
+    background-color: #424141;
+    color: white;
 }
 #HeadAbout {
     margin-top: 10%;
@@ -405,8 +502,8 @@ img{
     font-weight: 100;
     margin-bottom: 6%;
 }
-article {
-    grid-area: A;
+#pabo {
+    grid-area: pabo;
     max-width: 800px;
     text-align: center;
     margin-left: auto;
@@ -417,7 +514,26 @@ article {
 #LineAbout{
     grid-area: lA;
 }
+
+/*Contact me*/
+#Containercon {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:    
+    "header"
+    "concon"
+    "footer";
+    background-color: #424141;
+    color: white;
+    max-width: 1024px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;  
+}
 #ContainerContact {
+    margin-top: 100px;
+    grid-area: concon;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -426,8 +542,7 @@ article {
     "HC"    
     "CI"
     "F"
-    "LC"
-    "footer";
+    "LC";
     background-color: #424141;
     color: white;
     max-width: 1024px;
@@ -490,8 +605,8 @@ form {
     grid-area: Submit;
     max-width: 100px;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    background-color: #BE0000;
+    font-size: 2.5rem;
+    background-color: #AB0E0E;
     color: white;
     height:40px
 }
@@ -500,11 +615,46 @@ form {
     grid-area: Reset;
     max-width: 80px;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     height:40px
 }
 #LineContact {
     grid-area: LC;
+}
+
+/*Footer*/
+footer {
+    grid-area: footer;
+    display: grid;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 1.7rem;
+    font-weight: 100;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". namefoot ."
+    "schoolfoot mailfoot yearfoot"
+    ;
+    text-align: center;
+}
+#SchoolFoot {
+    grid-area: schoolfoot ;
+}
+#YearFoot {
+    grid-area: yearfoot;
+}
+#NameFoot {
+    grid-area: namefoot;
+    font-family: 'Marck Script', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    margin:0%;
+    margin-bottom: 10%;
+
+}
+#MailFoot {
+    grid-area: mailfoot;
 }
 
 /*mobile index*/
@@ -513,13 +663,11 @@ form {
     #PortPres {
         max-width:90%
     }
-}
-@media only screen and (max-width: 600px) {
     html {
         font-size: 50%;
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     body {
         background-color: #424141;
     }
@@ -540,4 +688,16 @@ form {
     form {
         margin-left:5%
     }
+    nav {
+        display: none;
+    }
+    #hambbutton {
+        display: block;
+    }
+    #HeaderPo {
+        grid-template-areas: 
+        "logo . hamb";
+        position: fixed;
+    }
+
 }

@@ -8,22 +8,37 @@
         <title>Portfolio</title>
     </head>
     <body>
-        <container id="ContainerPo"> <!--Gridmain-->
+        <div id="ContainerPo"> <!--Gridmain-->
             <header id="HeaderPo"> <!--Grid header-->
-                <button id="LogoButton">
-                <a id="logo" href="index.html">Mikaela Frendin</a>
-                </button>
-                <nav>
-                    <button id="PortfolioNav">
-                        <a id="PortfolioNavLi" href="portfolio.html">Portfolio</a>
-                    </button>
-                    <button id="AboutNav">
-                        <a id="AboutMeNavLi" href="about.html">About</a>
-                    </button>
-                    <button  id="ContactNav">
-                        <a id="ContactMeNavLi" href="contact.html">Contact</a>
-                    </button>
+                <div id="LogoButton">
+                    <a id="logo" href="index.html">Mikaela Frendin</a>
+                </div>
+                <nav id="topnav">
+                    <div class=link id="AboutNav">
+                        <a class="AboutMeNavLi" href="about.html">About</a>
+                    </div>
+                    <div class=link  id="ContactNav">
+                        <a class="ContactMeNavLi" href="contact.html">Contact</a>
+                    </div>
+                    <div class=link id="PortfolioNav">
+                        <a class="PortfolioNavLi" href="portfolio.html">Portfolio</a>
+                    </div>
                 </nav>
+
+                <div id="hambbutton">
+                    <img src="hamb.png" alt="Hamburger navigation" style="max-height: 2em" />
+                    <ul>
+                        <li>
+                            <a class="PortfolioNavLi" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="ContactMeNavLi" href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="AboutMeNavLi" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
             </header>
             
             <p id="PortPres">Below you will find the projects I have made 
@@ -34,41 +49,41 @@
             <div class=line id="line1"> <!--A red line-->
             </div>
 
-            <container Class="ContainerMain" id="projectsCont"> <!--Grid Links-->
+            <div Class="ContainerMain" id="projectsCont"> <!--Grid Links-->
                 
                 <div class="port" id="port1">
                     <h2>My first pojects</h2>
                     <h4>Year 1, term 1</h4>
-                    <button type=button id="ToPortfolio1">
+                    <div class=link id="ToPortfolio1">
                         <a id="Portfolio1Li" href="portfolio1.html">To Portfolio</a>
-                    </button>
+                    </div>
                 </div>
                 
                 <div class="port" id="port2">
                 <h2>To be added during 2023</h2>
                 <h4>Year 1, term 2</h4>
-                <button type=button disabled id="ToPortfolio2"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
+                <div class=link id="ToPortfolio2"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
                     To Portfolio
-                </button>
+                </div>
                 </div>
 
                 <div class="port" id="port3">
                 <h2>To be added during 2023</h2>
                 <h4>Year 2, term 1</h4>
-                <button type=button disabled id="ToPortfolio3"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
+                <div class=link id="ToPortfolio3"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
                     To Portfolio
-                </button>
+                </div>
                 </div>
 
                 <div class="port" id="port4">
                 <h2>To be added during 2024</h2>
                 <h4>Year 2, term 2</h4>
-                <button type=button disabled id="ToPortfolio4"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
+                <div class=link id="ToPortfolio4"> <!--https://www.w3schools.com/tags/att_button_disabled.asp-->
                     To Portfolio
-                </button>
+                </div>
                 </div>
 
-            </container>
+            </div>
 
             <div class = line id="line2"> <!--A red line-->
             </div>
@@ -88,6 +103,6 @@
                     frendin.mikaela@gmail.com
                 </h4>
             </footer>
-        </container>
+        </div>
     </body>
 </html>

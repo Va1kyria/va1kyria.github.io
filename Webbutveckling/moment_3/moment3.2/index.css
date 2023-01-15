@@ -244,13 +244,20 @@ footer h2 {
 }
 /*hamburger meny*/
  /*Sourse David Frendin*/
-.hamburger ul {
+.hamburger {
     display: none;
+    padding-right:1em;
+    padding-left: 5em;
+    
+}
+
+.hamburger ul {
     position: absolute;
     right: 0;
     top: 2em;
     max-width: 100%;
     width: 500px;
+    display: none;
 }
 .hamburger ul li {
     display: block;
@@ -264,8 +271,8 @@ footer h2 {
     text-decoration: none;
     text-align: center;
     border:3px solid #393939;
-
 }
+
 .hamburger:hover ul {
     display: block;
 }
@@ -336,39 +343,61 @@ tfoot td {
     grid-template-columns: auto;
     min-height: 100vh;
     grid-template-areas: 
-    "picnav pic1 pic2"
+    "picnav  pics pics"
     "footer footer footer";
 }
+#pics {
+    margin: 0%;
+    padding: 0%;
+    margin-left:20px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding-left: 3em;
+    max-width:80vw ;
+    border: 4px  solid black;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "pic1 pic2";
+}
 .picture1 {
+    
     grid-area: pic1;
     object-fit: scale-down;
     max-width: 30vw;
-    min-width: 6em;
-    margin:auto;
-    margin-top: 200px;
-    margin-top: 200px;
-    margin-bottom: 100px
+    min-width: 8em;
+    padding: 0%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 .picture2 {
     grid-area: pic2;
     object-fit: scale-down;
     max-width: 30vw;
-    min-width: 6em;
-    margin:auto;
-    margin-top: 200px;
+    min-width: 8em;
+    padding: 0%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 /*Navigation for underpages*/
 .picnav {
+    margin: 0%;
+    padding: 0%;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-left: 8px;
+    border: 4px  solid black;
     grid-area: picnav;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto;
     grid-template-areas: 
     "ulpic";
-    margin-bottom: 100px;
+    max-width: 100px;
 }
 #ulpic {
-    grid-area: picnav;
+    grid-area: ulpic;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto;
@@ -376,17 +405,21 @@ tfoot td {
     "1"
     "2"
     "3";
+    padding: 0%;
+    margin: 0%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .picnavbutt {
-    
     background-color: #9e1e1e;
     color: lightgray;
     text-align: center;
     padding: 0.5em;
     text-decoration: none;
     border: 2px  solid black;
-    max-width:60px;
-    min-width: 60px;
+    max-width: 60px;
+    min-width: 50px;
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/    
 }
@@ -511,7 +544,6 @@ textarea {
 #jag {
     grid-area: jag;
     float: right;
-    background-image: url ("jag.webp");
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -522,11 +554,7 @@ textarea {
     padding-left: 10px;
 }
 
-@media only screen and (min-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
-    .hamburger { /*Removes hamburger hen screen is to big*/
-        display: none;
-    }
-}
+
 
 @media only screen and (max-width: 950px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
     .gridartCo {
@@ -543,9 +571,17 @@ textarea {
     /*pictures*/
     #gridartpi {
         grid-template-areas: 
-        "picnav pic1 "
-        "picnav pic2"
+        "picnav pics "
+        "picnav pics"
         "footer footer";
+    }
+    
+    #pics {
+        
+        padding-bottom: 0px;
+        grid-template-areas: 
+        "pic1"
+        "pic2";
     }
     .picture1 {
         width: 60vw;
@@ -562,6 +598,9 @@ textarea {
 
 @media only screen and (max-width: 700px) { /*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
  
+    .hamburger { /*adds the hamburgernavigation*/
+        display: block;
+    }
 
     .gridart {
         grid-template-areas: 
@@ -632,10 +671,9 @@ textarea {
         font-size: 25px;
         margin-bottom: 80px;
     }
-        #jag {
+    #jag {
         grid-area: jag;
         float: right;
-        background-image: url ("jag.webp");
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -644,5 +682,48 @@ textarea {
         margin-top: 20%;
         padding-bottom: 0%;
         padding-left: 5px;
-    }  
+    }
+    
+    .picnavbutt {
+        background-color: #9e1e1e;
+        color: lightgray;
+        text-align: center;
+        padding: 0em;
+        text-decoration: none;
+        border: 2px  solid black;
+        max-width: 60px;
+        min-width: 50px;
+        font-size: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ; /*https://www.w3schools.com/css/css3_buttons.asp*/    
+    }
+    .picnav {
+        margin: 0%;
+        padding: 0%;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        min-width: 40px;
+        border: 4px  solid black;
+        grid-area: picnav;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "ulpic";
+        min-width: 50px;
+    }
+    #ulpic {
+        grid-area: ulpic;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "1"
+        "2"
+        "3";
+        padding: 0%;
+        margin: 0%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    } 
 }

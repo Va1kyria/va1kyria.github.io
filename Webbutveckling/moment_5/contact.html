@@ -5,66 +5,79 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="pg2.css">
-        <title>Mikaela Frendin</title>
+        <title>Contact Me</title>
     </head>
     <body>
+        <div id="Containercon"> <!--Gridmain-->
+            <header id="HeaderPo"> <!--Grid header-->
+                <div id="LogoButton">
+                    <a id="logo" href="index.html">Mikaela Frendin</a>
+                </div>
+                <nav id="topnav">
+                    <div class=link id="AboutNav">
+                        <a class="AboutMeNavLi" href="about.html">About</a>
+                    </div>
+                    <div class=link  id="ContactNav">
+                        <a class="ContactMeNavLi" href="contact.html">Contact</a>
+                    </div>
+                    <div class=link id="PortfolioNav">
+                        <a class="PortfolioNavLi" href="portfolio.html">Portfolio</a>
+                    </div>
+                </nav>
 
-        <header id="HeaderPo"> <!--Grid header-->
-           
-            <button id="LogoButton">
-            <a id="logo" href="index.html">Mikaela Frendin</a>
-            </button>
-            <nav>
-                <button id="PortfolioNav">
-                    <a id="PortfolioNavLi" href="portfolio.html">Portfolio</a>
-                </button>
-                <button id="AboutNav">
-                    <a id="AboutMeNavLi" href="about.html">About</a>
-                </button>
-                <button  id="ContactNav">
-                    <a id="ContactMeNavLi" href="contact.html">Contact</a>
-                </button>
-            </nav>
-
-        </header>
-
-        <container Class="ContainerMain" id="ContainerContact"> <!--Gridmain-->
-
-            <div class="empty">
-            </div>
-
-            <header id="HeadContact">
-                
-                <h1 id="HeadContactH1">
-                    Contact Me
-                </h1>
-                
+                <div id="hambbutton">
+                    <img src="hamb.png" alt="Hamburger navigation" style="max-height: 2em" />
+                    <ul>
+                        <li>
+                            <a class="PortfolioNavLi" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="ContactMeNavLi" href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="AboutMeNavLi" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
             </header>
 
-            <p id="ContactInfo">
-                If you wish to contact me, please use the form
-                below or contact me direcly via frendin.mikaela@gmail.com
-            </p>
+            <div Class="ContainerMain" id="ContainerContact"> <!--Gridmain-->
 
-            <form>
-                <label for="NameCo" id="NameCoTx">Name</label>
-                <input type="text" id="NameCo" name="Name"><br>
+                <div class="empty">
+                </div>
 
-                <label for="Reason" id="ReasonTx">Header</label>
-                <input type="text" id="Reason" name="Reason"><br>
+                <header id="HeadContact">
+                    
+                    <h1 id="HeadContactH1">
+                        Contact Me
+                    </h1>
+                    
+                </header>
+
+                <p id="ContactInfo">
+                    If you wish to contact me, please use the form
+                    below or contact me direcly via frendin.mikaela@gmail.com
+                </p>
+
+                <form>
+                    <label for="NameCo" id="NameCoTx">Name</label>
+                    <input type="text" id="NameCo" name="Name"><br>
+
+                    <label for="Reason" id="ReasonTx">Header</label>
+                    <input type="text" id="Reason" name="Reason"><br>
+                    
+                    <label for="Message" id="MessageTx">Message</label>
+                    <textarea  id="Message" name="Message"></textarea>
                 
-                <label for="Message" id="MessageTx">Message</label>
-                <textarea  id="Message" name="Message"></textarea>
-            
-                <input id=submit type="Submit" value="Submit">
+                    <input id=submit type="Submit" value="Submit">
 
-                <input id=reset type="reset" value="Reset">
-            </form>
+                    <input id=reset type="reset" value="Reset">
+                </form>
 
-            <div class=line id="LineContact"> <!--A red line-->
+                <div class=line id="LineContact"> <!--A red line-->
+                </div>
+
             </div>
-
 
             <footer>
                 <H3 id=SchoolFoot>
@@ -80,6 +93,6 @@
                     frendin.mikaela@gmail.com
                 </h4>
             </footer>
-        </container>
+        </div>
     </body>
 </html>
